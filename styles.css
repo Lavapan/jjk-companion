@@ -1,0 +1,217 @@
+body {
+    background-color: #121214;
+    color: #e1e1e6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #29292e;
+    padding-bottom: 20px;
+}
+
+h1 {
+    color: #f7df1e; /* Punchy anime accent color */
+    margin-bottom: 10px;
+}
+
+.selector-container {
+    font-size: 1.1rem;
+}
+
+select {
+    background-color: #202024;
+    color: #fff;
+    border: 2px solid #f7df1e;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.notice-banner {
+    background-color: #202024;
+    border-left: 4px solid #f7df1e;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    text-align: center;
+    font-style: italic;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    align-items: stretch; /* Forces all cards in a single row to lock to the exact same vertical height */
+}
+
+/* The entire card container */
+.character-card {
+    background-color: #1a1a1e;
+    border: 1px solid #2d2d35;
+    border-radius: 4px; /* Sharp, clean game corners */
+    overflow: hidden; /* Prevents images from spilling out past the corners */
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Forces all cards in the same row to stretch to match the tallest card */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+    transition: transform 0.2s ease;
+}
+
+.character-card:hover {
+    transform: translateY(-4px); /* Interactive lift effect when hovered */
+    border-color: #f7df1e;
+}
+
+/* 🌟 THE PORTRAIT BOX: Locks everything into a 3:4 aspect ratio box */
+.portrait-container {
+    position: relative; /* Acts as an anchor point for floating corner badges */
+    width: 100%;
+    aspect-ratio: 3 / 4; /* Keeps the card proportions identical to your screenshot */
+    background: linear-gradient(180deg, #3a225d 0%, #120e24 100%); /* Default dark/purple gradient background */
+    overflow: hidden;
+}
+
+.character-portrait {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    color: transparent;
+    
+    /* 📸 THE GLOBAL BUST CUT: Focuses the crop on the top 15% of the image (the face/shoulders) 
+       instead of cutting directly across the chest/belly button at 50% center. */
+    object-position: center 15%; 
+}
+
+/* Container that holds the badges on the left side of the card */
+.badge-stack-left {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    display: flex;
+    flex-direction: column; 
+    gap: 4px;              
+    z-index: 10;
+    
+    /* 🔴 THE FIX: Ensures the stack container doesn't force its alignment 
+       to stretch the child elements to 100% width */
+    align-items: flex-start; 
+}
+
+/* Base style for every badge */
+.badge {
+    font-size: 0.65rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 4px 8px; /* Added slightly more horizontal padding for a premium look */
+    border-radius: 4px;
+    color: white;
+    
+    /* 🔴 THE FIXES: Forces the badge to dynamically hug the word length */
+    width: max-content;  /* Calculates width based strictly on text content */
+    display: inline-block;
+    white-space: nowrap; /* Prevents long names from awkwardly wrapping to a new line */
+}
+
+/* --- NEW: Affiliation Tag Styling System --- */
+
+/* The base design for your text badges */
+.affiliation-badge {
+    width: auto !important; /* Overrides our old strict square badge rule */
+    height: auto !important;
+    padding: 3px 8px !important;
+    font-size: 0.7rem !important;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Color rule for Tokyo Jujutsu High */
+.affiliation-badge.tokyo {
+    background-color: #1d2c54; /* Deep tactical blue */
+    border: 1px solid #3b528f;
+    color: #e1e1e6;
+}
+
+/* Color rule for Kyoto Jujutsu High */
+.affiliation-badge.kyoto {
+    background-color: #5c1e1e; /* Deep dark crimson red */
+    border: 1px solid #9e3a3a;
+    color: #e1e1e6;
+}
+
+/* Fallback color if you type another affiliation later (like 'Curse') */
+.affiliation-badge.antagonists {
+    background-color: #1f1f1f; /* Cursed energy green */
+    border: 1px solid #414141;
+    color: #e1e1e6;
+}
+
+/* 🌟 THE NAME OVERLAY: Dark gradient bar at the bottom of the portrait */
+.name-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 70%, rgba(0,0,0,0) 100%);
+    padding: 20px 10px 10px 10px;
+    box-sizing: border-box;
+    text-align: center;
+    z-index: 5;
+}
+
+.name-overlay h2 {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); /* Ensures name pop off the image backgrounds */
+}
+
+/* 🌟 DROPDOWN INTEL BOX: Underneath the card portrait */
+.card-details {
+    padding: 12px;
+    background-color: #202024;
+    border-top: 1px solid #2d2d35;
+}
+
+/* Adjusts the character name so it sits beautifully next to the image */
+.character-card h2 {
+    margin: 0;
+    color: #ffffff;
+    padding-bottom: 0;
+    border-bottom: none; /* Removed the old line under the name since card-header handles it */
+}
+
+.character-card p {
+    font-size: 0.9rem;
+    color: #8d8d99;
+    margin: 5px 0;
+}
+
+.info-section h3 {
+    font-size: 0.95rem;
+    margin: 15px 0 5px 0;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-list {
+    list-style-type: square;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.info-list li {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    line-height: 1.4;
+}

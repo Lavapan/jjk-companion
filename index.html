@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jujutsu Kaisen Companion Handbook</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>JJK Companion Handbook</h1>
+        <div class="selector-container">
+            <label for="episodeSlider">Currently Watching:</label>
+            <select id="episodeSelect">
+                </select>
+        </div>
+    </header>
+
+    <main>
+        <!-- This section alerts the user if an episode is completely safe/empty -->
+        <div id="companionNotice" class="notice-banner"></div>
+
+        <!-- The dynamic grid where character cards will populate -->
+        <div id="characterGrid" class="grid-container"></div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
