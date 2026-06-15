@@ -10,20 +10,33 @@
 
     <header>
         <h1>JJK Companion Handbook</h1>
-        <div class="selector-container">
-            <label for="episodeSlider">Currently Watching:</label>
-            <select id="episodeSelect">
-                </select>
-        </div>
     </header>
 
-    <main>
-        <!-- This section alerts the user if an episode is completely safe/empty -->
-        <div id="companionNotice" class="notice-banner"></div>
+    <div class="nav-control-wrapper">
+          <button id="prevEp" class="nav-btn">← Prev</button>
+          <select id="episodeSelect"></select>
+         <button id="nextEp" class="nav-btn">Next →</button>
+    </div>
 
-        <!-- The dynamic grid where character cards will populate -->
-        <div id="characterGrid" class="grid-container"></div>
-    </main>
+    <div class="app-layout">
+        
+        <aside class="lore-sidebar" id="loreSidebar">
+            <h2 class="sidebar-title">GLOSSARY</h2>
+            <div id="loreListContainer"></div>
+        </aside>
+
+        <main class="main-content">
+            <div id="companionNotice" class="notice-banner"></div>
+            <div id="characterGrid"></div>
+        </main>
+
+    </div>
+
+    <section id="changelog" class="changelog-section">
+        <h3>Changelog</h3>
+        <ul>
+            </ul>
+    </section>
 
     <script src="app.js"></script>
 </body>
