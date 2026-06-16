@@ -79,6 +79,7 @@ function parseCSV(text) {
         headers.forEach((header, index) => {
             let val = currentLine[index] ? currentLine[index].trim().replace(/^"|"$/g, '') : "";
             val = val.replace(/\r$/, '');
+            val = val.replace(/""/g, '"');
             obj[header] = val;
         });
         result.push(obj);
