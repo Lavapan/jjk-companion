@@ -8,11 +8,11 @@ let chronologicalTimeline = [];
 let expandedDrawers = new Set();
 
 // =========================================================================
-// LIVE GOOGLE SHEETS CONNECTION CONFIGURATION
+// LIVE DATABASE CONNECTION CONFIGURATION
 // =========================================================================
-const CHARACTER_MASTER_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQuhaIjHDWNjF9A4ZxL_GXljLbQF40XMc8EtSo5AV9I7-l57bzd9zdxWnuvqPdRMmyj57LTPqCKmvwW/pub?gid=2003623475&single=true&output=csv";
-const TIMELINE_LOGS_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQuhaIjHDWNjF9A4ZxL_GXljLbQF40XMc8EtSo5AV9I7-l57bzd9zdxWnuvqPdRMmyj57LTPqCKmvwW/pub?gid=0&single=true&output=csv";
-const CHANGELOG_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQuhaIjHDWNjF9A4ZxL_GXljLbQF40XMc8EtSo5AV9I7-l57bzd9zdxWnuvqPdRMmyj57LTPqCKmvwW/pub?gid=1348112286&single=true&output=csv";
+const CHARACTER_MASTER_URL = "./characters.csv";
+const TIMELINE_LOGS_URL = "./timeline.csv";
+const CHANGELOG_URL = "./changelogs.csv";
 
 // =========================================================================
 // EPISODE SELECTOR GENERATOR
@@ -87,16 +87,13 @@ function parseCSV(text) {
     return result;
 }
 
-// Reaches out to Google, grabs the data, and boots the site.
-async function loadLiveGoogleData() {
+// Reaches out to your local files and boots the site.
+async function loadLiveData() {
     try {
-        // Force live asset updates
-        const cacheBuster = `&t=${new Date().getTime()}`;
-
         const [masterResponse, logsResponse, changeResponse] = await Promise.all([
-            fetch(CHARACTER_MASTER_URL + cacheBuster),
-            fetch(TIMELINE_LOGS_URL + cacheBuster),
-            fetch(CHANGELOG_URL + cacheBuster),
+            fetch(CHARACTER_MASTER_URL),
+            fetch(TIMELINE_LOGS_URL),
+            fetch(CHANGELOG_URL),
         ]);
 
         const masterText = await masterResponse.text();
@@ -107,15 +104,15 @@ async function loadLiveGoogleData() {
         timelineLogs = parseCSV(logsText);
         changelogs = parseCSV(changeText);
 
-        console.log("Database successfully synchronized with Google Sheets!");
+        console.log("Database successfully synchronized!");
         renderCompanionWebsite();
         renderChangelog();
 
     } catch (error) {
-        console.error("Critical Failure linking to Google Sheets database:", error);
+        console.error("Critical Failure linking to database:", error);
         const companionNotice = document.getElementById('companionNotice');
         if (companionNotice) {
-            companionNotice.innerHTML = "⚠️ <strong>Database Connection Error:</strong> Unable to sync with Google Sheets.";
+            companionNotice.innerHTML = "<strong>Database Connection Error:</strong> Unable to sync with CSVs.";
         }
     }
 }
@@ -296,7 +293,7 @@ function renderCompanionWebsite() {
 
         const isCurrentlyExpanded = expandedDrawers.has(uniqueId);
         const drawerClass = isCurrentlyExpanded ? "expanded" : "collapsed";
-        const buttonText = isCurrentlyExpanded ? "Show Less ↑" : "Show More ↓";
+        const buttonText = isCurrentlyExpanded ? "Show Less" : "Character Details";
 
         // BUILD CHARACTER CARD
         const card = document.createElement('div');
@@ -307,17 +304,15 @@ function renderCompanionWebsite() {
                     ${badgesHTML}
                 </div>
                 <img src="${portraitUrl}" alt="${nameToDisplay}" class="character-portrait">
-
                 ${gradeBadgeHTML}
-
-                <div class="name-overlay">
-                    <h2>${nameToDisplay}</h2>
-                </div>
             </div>
             
-            <div class="card-details">
-                <div class="info-drawer ${drawerClass}" id="drawer-${uniqueId}">
-                    
+            <div class="name-overlay">
+                <h2>${nameToDisplay}</h2>
+            </div>
+            
+            <div class="info-drawer ${drawerClass}" id="drawer-${uniqueId}">
+                <div class="drawer-scroll-content">
                     ${uniqueFacts.length > 0 ? `
                         <div class="info-section">
                             <h3>Information</h3>
@@ -350,8 +345,9 @@ function renderCompanionWebsite() {
 
                     ${!hasContent ? `<p class="no-data">Keep watching to find out more!</p>` : ''}
                 </div>
-                
-                <!-- Wrap the button in a control div for CSS overflow detection -->
+            </div>
+
+            <div class="card-details">
                 ${hasContent ? `
                     <div class="drawer-controls">
                         <button class="expand-btn" onclick="toggleDrawer('${uniqueId}')">
@@ -370,10 +366,12 @@ function renderCompanionWebsite() {
         const controls = card.querySelector('.drawer-controls');
         
         if (drawer && controls) {
-            // scrollHeight measures the total inner text height.
-            // If it's less than or equal to our 140px CSS limit, don't show "Show More" button.
-            if (drawer.scrollHeight <= 140) {
+            // If the inner text content is tiny enough to fit natively in the 2-line preview, hide the toggle button
+            if (drawer.scrollHeight <= 95) {
                 controls.style.display = 'none';
+                // Remove the bottom crop mask since the text fits fully without clipping
+                drawer.style.maskImage = 'none';
+                drawer.style.webkitMaskImage = 'none';
             }
         }
     });
@@ -394,26 +392,36 @@ if (episodeSelect) {
 }
 
 // Launch the live sync engine immediately when the browser window finishes loading.
-window.addEventListener('DOMContentLoaded', loadLiveGoogleData);
+window.addEventListener('DOMContentLoaded', loadLiveData);
 
 // Toggle drawer mechanism.
 function toggleDrawer(characterId) {
     const drawer = document.getElementById(`drawer-${characterId}`);
     if (!drawer) return;
-    const button = drawer.nextElementSibling ? drawer.nextElementSibling.querySelector('.expand-btn') : null; 
+    
+    // Safely dive into the parent container to find the button inside .drawer-controls
+    const cardContainer = drawer.closest('.character-card');
+    const button = cardContainer ? cardContainer.querySelector('.expand-btn') : null; 
     
     if (drawer.classList.contains("collapsed")) {
         drawer.classList.remove("collapsed");
         drawer.classList.add("expanded");
-        if (button) button.innerText = "Show Less ↑";
+        if (button) button.innerText = "Show Less";
         
         expandedDrawers.add(characterId); // Drawer is expanded.
     } else {
         drawer.classList.remove("expanded");
         drawer.classList.add("collapsed");
-        if (button) button.innerText = "Show More ↓";
+        if (button) button.innerText = "Character Details"; // Kept matching your default string
         
         expandedDrawers.delete(characterId); // Drawer is collapsed.
+
+        // 🎯 FIX: Instantly snap the content box back to the top when closing 
+        // This stops the text section from clipping out out-of-bounds on collapse!
+        const scrollContent = drawer.querySelector('.drawer-scroll-content');
+        if (scrollContent) {
+            scrollContent.scrollTop = 0;
+        }
     }
 }
 
@@ -609,7 +617,7 @@ function formatText(text) {
 }
 
 function renderChangelog() {
-    const logContainer = document.querySelector('#changelog ul'); 
+    const logContainer = document.querySelector('#changelogs ul'); 
     if (!logContainer) return; 
     
     logContainer.innerHTML = ""; 

@@ -166,14 +166,19 @@ select#episodeSelect:hover {
     width: 100%;
     height: 280px;
     overflow: hidden;
-    background-color: #1a1a24; /* Base background color */
+    background-color: #1a1a24;
     background: linear-gradient(135deg, #1e1e2f 0%, #0d0d13 100%);
+    transition: filter 0.3s ease;
+}
+
+.character-card:has(.info-drawer.expanded) .portrait-container {
+    filter: blur(4px);
 }
 
 .character-portrait {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Guarantees no warping or distortion on your images */
+    object-fit: cover;
     display: block;
     object-position: center 10%;
     filter: drop-shadow(0px 8px 12px rgba(0, 0, 0, 0.5));
@@ -187,7 +192,7 @@ select#episodeSelect:hover {
     flex-direction: column;
     gap: 6px;
     z-index: 5;
-    align-items: flex-start; /* Stops badges from stretching automatically */
+    align-items: flex-start;
 }
 
 .badge {
@@ -198,7 +203,7 @@ select#episodeSelect:hover {
     border-radius: 4px;
     color: #ffffff;
     background-color: #333338;
-    width: max-content; /* Dynamic width adjustment based on letters length */
+    width: max-content;
     white-space: nowrap;
     letter-spacing: 0.5px;
 }
@@ -220,18 +225,26 @@ select#episodeSelect:hover {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
 }
 
-.grade-badge.grade-4,
+.grade-badge.grade-4 {
+    color: #cf7234; /* Silver/Gray for lower grades */
+    border: 1px solid rgba(143, 74, 17, 0.3);
+}
+
 .grade-badge.grade-3 {
-    color: #a1a1aa; /* Silver/Gray for lower grades */
+    color: #c9c9d1; /* Silver/Gray for lower grades */
     border: 1px solid rgba(161, 161, 170, 0.3);
 }
 
 .grade-badge.semi-grade-2,
-.grade-badge.grade-2,
-.grade-badge.semi-grade-1,
-.grade-badge.grade-1 {
+.grade-badge.grade-2 {
     color: #fbbf24; /* Gold/Bronze for higher standard grades */
     border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.grade-badge.semi-grade-1,
+.grade-badge.grade-1 {
+    color: #34dee4; /* Gold/Bronze for higher standard grades */
+    border: 1px solid rgba(27, 150, 172, 0.3);
 }
 
 .grade-badge.special-grade {
@@ -243,62 +256,108 @@ select#episodeSelect:hover {
 
 .name-overlay {
     position: absolute;
-    bottom: 0;
+    top: 250px; 
     left: 0;
     width: 100%;
     background: linear-gradient(to top, rgba(12, 12, 16, 0.95) 0%, rgba(12, 12, 16, 0.75) 100%);
-    backdrop-filter: blur(4px); 
-    -webkit-backdrop-filter: blur(4px);
-    padding: 2px 16px;
+    padding: 8px 16px;
     box-sizing: border-box;
-    z-index: 5;
+    z-index: 65; 
+    transition: top 0.35s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.35s ease, height 0.35s ease;
 }
 
 .name-overlay h2 {
-    margin: 0;
     font-size: 1.25rem;
     font-weight: 700;
     color: #ffffff;
-    letter-spacing: 0.5px;
+    margin: 0;
 }
 
 /* =========================================================================
    3. TEXT CONTENT AREA & THE SLIDING REVEAL DRAWER
    ========================================================================= */
-.card-details {
-    padding: 16px;
+.character-card {
+    position: relative;
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
-    justify-content: space-between;
+    min-height: 440px;
+}
+
+.card-details {
+    padding: 12px 16px 16px 16px;
+    display: flex;
+    flex-direction: column;
     background-color: #16161a;
-    gap: 12px; /* Adds a reliable breathing gap between the text block and button */
-}
-
-/* The expanding drawer framework */
-.info-drawer {
+    position: relative;
     width: 100%;
-    transition: max-height 0.3s ease-in-out;
+    z-index: 60;
+    transition: height 0.35s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.35s ease;
+}
+
+.info-drawer {
+    background-color: #16161a;
+    width: 100%;
+    border-left: 1px solid #24242b;
+    border-right: 1px solid #24242b;
+    position: relative;
+    z-index: 50;
+    transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.info-drawer.collapsed {
+    height: 105px; 
     overflow: hidden;
 }
 
-/* 🔒 COLLAPSED VIEW CEILING: Cuts off massive logs at a consistent baseline */
-.info-drawer.collapsed {
-    max-height: 140px; 
-    overflow: hidden;
-    /* Move the mask-image lines out of here so they don't apply to empty cards! */
+.info-drawer.collapsed .drawer-scroll-content {
+    overflow-y: hidden;
+    height: 100%;
+}
+
+.info-drawer.expanded {
+    height: 320px;
+    margin-top: -215px;
+    background-color: rgba(22, 22, 26, 0.96); 
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid #ffcc00;
+    border-radius: 12px 12px 0 0;
+    z-index: 55;
+}
+
+.drawer-scroll-content {
+    padding: 16px 16px 12px 16px; 
+    height: 100%;
+}
+
+.info-drawer.expanded .drawer-scroll-content {
+    overflow-y: auto;
+    padding-top: 60px;
 }
 
 .character-card:has(.expand-btn) .info-drawer.collapsed {
-    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
 }
 
-/* 🔓 EXPANDED VIEW CEILING: Grows naturally to show deep seasonal entries */
-.info-drawer.expanded {
-    max-height: 1500px;
-    mask-image: none;
-    -webkit-mask-image: none;
+/* 🎯 REQ 3: Stick Nameplate securely above everything when expanded */
+.character-card:has(.info-drawer.expanded) .name-overlay {
+    position: absolute;
+    top: 0;
+    bottom: auto;
+    left: 0;
+    width: 100%;
+    height: 48px;
+    background: linear-gradient(to top, rgba(12, 12, 16, 0.95) 0%, rgba(12, 12, 16, 0.75) 100%);
+    backdrop-filter: blur(4px); 
+    -webkit-backdrop-filter: blur(4px);
+    
+    /* Safely out-prioritizes the expanded drawer container height (55) */
+    z-index: 85; 
+    
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
 /* Style for when a character has appeared but has no custom logs yet */
@@ -502,7 +561,7 @@ select#episodeSelect:hover {
     color: #a1a1aa; /* Slightly muted for italics */
 }
 
-.changelog-section {
+.changelogs-section {
     background: #111111; /* Matches your other dark containers */
     padding: 20px;
     margin-top: 60px;
@@ -510,7 +569,7 @@ select#episodeSelect:hover {
     color: #e0e0e0;
 }
 
-.changelog-section h3 {
+.changelogs-section h3 {
     margin-top: 0px;
     margin-bottom: 10px;
     color: #ffffff;
@@ -539,10 +598,29 @@ select#episodeSelect:hover {
 /* --- Character Card States --- */
 
 /* Cleaned Status Classes */
+.character-card.status-missing::before {
+    content: "MISSING";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 0.65rem;
+    font-weight: bold;
+    color: #b4b4b4;
+    letter-spacing: 0.1em;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2px 6px;
+    border-radius: 3px;
+    z-index: 10; /* Ensures it stays above the gradient overlays */
+}
+
 .character-card.status-missing {
-    opacity: 0.6;
-    filter: brightness(0.8);    /* Darkens the image without killing the red tint */
-    filter: grayscale(60%); /* Full mono for missing */
+    border: 4px solid #4b4b4b;
+    position: relative;
+}
+
+.character-card.status-missing .character-portrait {
+    filter: grayscale(40%) brightness(0.7);
+    transition: filter 0.25s ease;
 }
 
 .character-card.status-dead::before {
@@ -562,11 +640,12 @@ select#episodeSelect:hover {
 
 .character-card.status-dead {
     border: 4px solid #5a1818;
-    background-color: #1a0808; 
+    
     position: relative;
 }
 
 .character-card.status-dead .character-portrait {
     filter: grayscale(100%) brightness(0.6);
     transition: filter 0.25s ease;
+    
 }
