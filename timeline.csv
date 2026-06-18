@@ -53,7 +53,7 @@ nobara_kugisaki,S1E03,fact,fact_01,A first-year student at Tokyo Jujutsu Tech.
 nobara_kugisaki,S1E03,affiliation_change,,Tokyo
 nobara_kugisaki,S1E03,fact,fact_02,Channels her cursed energy through nails and straw dolls.
 nobara_kugisaki,S1E03,relation,rel_01,Saori *(close friend)*
-nobara_kugisaki,S1E03,fact,fact_10,Uses a hammer and nails as her preferred weapon.
+nobara_kugisaki,S1E03,fact,fact_10,Wields a hammer and nails as her preferred weapon.
 curses,S1E03,fact,fact_02,"Curses grow in strength and numbers proportionally to the population, due to the density of negative emotions."
 --- Episode 4 ---,,,,
 kiyotaka_ijichi,S1E04,appearance,,
@@ -83,7 +83,6 @@ cursed_technique,S1E05,fact,fact_02,**Reverse Cursed Technique:** Capable of hea
 megumi_fushiguro,S1E05,fact,fact_02,Fights using Shikigami created from shadows.
 kenjaku,S1E05,appearance,,
 kenjaku,S1E05,name_override,,???
-kenjaku,S1E05,appearance_change,,images/geto_image.png
 kenjaku,S1E05,fact,fact_01,A man working with cursed spirits.
 jogo,S1E05,appearance,,
 jogo,S1E05,fact,fact_01,A cursed spirit working with a man.
@@ -172,10 +171,10 @@ mai_zenin,S1E08,reveal_identity,,
 mai_zenin,S1E08,fact,fact_01,"A student at Kyoto Jujutsu Tech. "
 mai_zenin,S1E08,relation,rel_01,Maki Zenin *(twin sister)*
 mai_zenin,S1E08,fact,fact_02,**Cursed Technique:** unknown<br><em>Lacks techniques but can imbue objects with cursed energy.</em>
-mai_zenin,S1E08,fact,fact_10,Uses a handgun as her preferred weapon.
+mai_zenin,S1E08,fact,fact_10,Wields a handgun as her preferred weapon.
 maki_zenin,S1E08,relation,rel_01,Mai Zenin *(twin sister)*
 maki_zenin,S1E08,fact,fact_02,**Cursed Technique:** none<br><em>Possesses zero innate cursed energy.</em>
-maki_zenin,S1E08,fact,fact_10,Became a jujutsu sorcerer to spite her family.
+maki_zenin,S1E08,fact,fact_10,Became a jujutsu sorcerer to spite the Zenin clan.
 megumi_fushiguro,S1E08,grade,,Grade 2
 kenjaku,S1E08,fact,fact_10,"Organized a jujutsu terror attack known as ""the Night Parade of a Hundred Demons"" in the past."
 kasumi_miwa,S1E08,appearance,,
@@ -264,7 +263,7 @@ curses,S1E14,fact,fact_03,"Sorcerers, if not killed with cursed energy, could po
 --- Episode 15 ---,,,,
 grade_scale,S1E15,fact,fact_02,Sorcerers advance in rank through recommendations from other sorcerers.<br><em>Teachers cannot recommend students who are under their tutelage.</em>
 aoi_todo,S1E15,fact,fact_09,"Found a kindred spirit in Yuji and imagines memories of them being best friends, like brothers."
-kasumi_miwa,S1E15,fact,fact_10,Uses a katana as her preferred weapon.
+kasumi_miwa,S1E15,fact,fact_10,Wields a katana as her preferred weapon.
 momo_nishimiya,S1E15,fact,fact_10,Rides a broom to fly.
 --- Episode 16 ---,,,,
 panda,S1E16,fact,fact_10,"He's a unique cursed corpse with emotions, considered a mutation, who was created by Yaga."
@@ -295,25 +294,25 @@ mei_mei,S1E17,fact,fact_01,A jujutsu sorcerer.
 mei_mei,S1E17,fact,fact_02,**Cursed Technique:** shared senses<br><em>Able to share her senses with animals and project them so it could be seen by others as well.</em>
 mei_mei,S1E17,fact,fact_10,Values money above all else.
 momo_nishimiya,S1E17,fact,fact_02,"**Cursed Technique:** broom manipulation<br><em>Able to control her broom remotely. By swinging her broom, she is able to send out bursts of wind as attacks.</em>"
-momo_nishimiya,S1E17,fact,fact_10,Uses a broom as her preferred tool.
+momo_nishimiya,S1E17,fact,fact_10,Wields a broom as her preferred tool.
 toge_inumaki,S1E17,fact,fact_08,Cursed speech can be countered by actively protecting one's ears and brain with cursed energy.
 mai_zenin,S1E17,fact,fact_11,Was ostracized by the Zenin clan.
 mai_zenin,S1E17,relation,rel_02,Ougi Zenin *(father)*
 mai_zenin,S1E17,fact,fact_02,"**Cursed Technique:** Construction<br><em>Creates matter using cursed energy that won't disappear even when the technique is released. As a result, it consumes an immense amount of energy. Currently, her maximum is one bullet a day.</em>"
-mai_zenin,S1E17,fact,fact_10,"Uses a handgun as her preferred weapon because, with her cursed technique, she is able to bluff her bullet count."
+mai_zenin,S1E17,fact,fact_10,"Wields a handgun as her preferred weapon because, with her cursed technique, she is able to bluff her bullet count."
 maki_zenin,S1E17,relation,rel_02,Ougi Zenin *(father)*
-maki_zenin,S1E17,fact,fact_10,"Became a jujutsu sorcerer to spite her family, and to eventually return and take over as head of the Zenin clan."
+maki_zenin,S1E17,fact,fact_10,"Became a jujutsu sorcerer to spite the Zenin clan, and to eventually return and take over as the head of the clan."
 maki_zenin,S1E17,fact,fact_08,"Due to her Heavenly Pact, she was born without cursed energy. In exchange, she has superhuman physical abilities."
 naobito_zenin,S1E17,appearance,,
 naobito_zenin,S1E17,fact,fact_01,He is the Head of the Zenin Clan.
 --- Episode 18 ---,,,,
-noritoshi_kamo,S1E18,fact,fact_10,Uses a bow and arrows laced with his blood to control their trajectory.
+noritoshi_kamo,S1E18,fact,fact_10,Wields a bow and arrows laced with his blood to control their trajectory.
 noritoshi_kamo,S1E18,fact,fact_02,**Cursed Technique:** Blood Manipulation<br><em>Able to manipulate his blood and objects imbued with it.</em>
 noritoshi_kamo,S1E18,relation,rel_01,??? *(mother):* Was a Kamo clan concubine.
 megumi_fushiguro,S1E18,fact,fact_02,**Cursed Technique:** Ten Shadows Technique<br><em>Manifests Shikigami using shadows. He can manifest ten types of Shikigami and even combine them. He can only manifest Shikigami that he has tamed.</em>
 megumi_fushiguro,S1E18,fact,fact_10,Has since cut ties with the Zenin clan.
 major_clans,S1E18,appearance,,
-major_clans,S1E18,reveal_identity,,Major Clans
+major_clans,S1E18,reveal_identity,,Three Major Clans
 major_clans,S1E18,fact,fact_01,**Zenin Clan**
 major_clans,S1E18,fact,fact_02,**Kamo Clan**
 juzo_kumiya,S1E18,appearance,,
@@ -335,9 +334,9 @@ hanami,S1E19,fact,fact_10,Has a flower bulb on their left shoulder.
 --- Episode 20 ---,,,,
 yuki_tsukumo,S1E20,appearance,,
 yuki_tsukumo,S1E20,fact,fact_01,A jujutsu sorcerer Todo met when he was younger.
-yuki_tsukumo,S1E20,fact,fact_02,**Cursed Technique:** unknown<br><em>Accompanied by a skeletal entity.</em>,
-yuki_tsukumo,S1E20,fact,fact_10,Rides a motorcycle.,
-yuki_tsukumo,S1E20,relation,rel_01,Aoi Todo *(mentee?)*,
+yuki_tsukumo,S1E20,fact,fact_02,**Cursed Technique:** unknown<br><em>Accompanied by a skeletal entity.</em>
+yuki_tsukumo,S1E20,fact,fact_10,Rides a motorcycle.
+yuki_tsukumo,S1E20,relation,rel_01,Aoi Todo *(mentee?)*
 aoi_todo,S1E20,fact,fact_11,"Has a self-proclaimed IQ of 530,000."
 aoi_todo,S1E20,fact,fact_02,"**Cursed Technique:** Boogie Woogie<br><em>By clapping his hands, he can swap the position of himself, others and objects, that possesses cursed energy above a certain level, with each other. He can only swap the position of 2 things at once.</em>"
 aoi_todo,S1E20,fact,fact_09,"Daydreams about Takada-chan and Yuji, often appearing in false memories and his own subconscious."
@@ -404,5 +403,54 @@ choso,S1E24,relation,rel_01,Kechizu *(younger brother)* **†**
 choso,S1E24,relation,rel_02,Eso *(younger brother)* **†**
 yuji_itadori,S1E24,fact,fact_04,Has absorbed 4 Sukuna fingers.
 --- Movie 1 ---,,,,
+yuta_okkotsu,M1,fact,fact_10,"Rika, coined ""Queen of Curses"" by Geto, was a special grade cursed spirit, manifested by Yuta when he rejected her death, accidentally cursing her into a cursed spirit. She has since been freed."
+yuta_okkotsu,M1,grade,,Special Grade
+yuta_okkotsu,M1,relation,rel_01,Rika Orimoto *(childhood sweetheart)*: Turned into a cursed spirit by Yuta unintentionally but has been freed.
+yuta_okkotsu,M1,fact,fact_02,**Cursed Technique:** cursed energy manipulation<br><em>Able to use Rika and the techniques of others through imbued objects.</em>
+veil,M1,fact,fact_01,"A barrier that conceals the affected area from the outside world. It also provokes curses within to reveal themselves.<br><em>Additional effects can be added to it, such as denying entry or exit to certain groups of people or individuals.</em>"
+veil,M1,fact,fact_02,"Veils obstruct the usage of electronic devices, such as cell service."
+curses,M1,fact,fact_02,"Curses grow in strength and numbers proportionally to the population, due to the density of negative emotions.<br><em>Weaker curses tend to group together.</em>"
+curses,M1,fact,fact_04,"Much like cursed energy, curses can also be imbued into existing objects."
+toge_inumaki,M1,fact,fact_10,The throat strain from using his cursed technique can be somewhat remedied by the use of throat medicine.
+kenjaku,M1,grade,,Special Grade
+kenjaku,M1,fact,fact_09,Was banished from Tokyo Jujutsu Tech after cursing a hundred normal people to death.
+kenjaku,M1,fact,fact_02,"**Cursed Technique:** Cursed Spirit Manipulation<br><em>Able to manipulate unbound curses. He can absorb them as orbs, summon, combine and command them.</em>"
+kenjaku,M1,fact,fact_11,"While originally believing that sorcerers must protect non-sorceres, he now looks down on those who can't use jujutsu or cursed energy, referring to them as 'monkeys'."
+kenjaku,M1,fact,fact_12,"Wishes to bring about a paradise for jujutsu sorcerers, by dismantling the jujutsu society and dethroning normal humans as the ruling power."
+kenjaku,M1,fact,fact_12,"He is the leader of a religious group, using his position to collect curses from its followers."
+yuta_okkotsu,M1,fact,fact_12,"Has trouble sensing cursed energy, due to over-exposure to Rika's immense cursed energy."
+major_clans,M1,fact,fact_03,Find out more.
+maki_zenin,M1,fact,fact_10,"Became a jujutsu sorcerer to spite the Zenin clan, and planning to return as a Grade 1 sorcerer to take over as the head of the clan."
+takuma_ino,M1,fact,fact_01,A jujutsu sorcerer alumni from Tokyo Jujutsu Tech.
+takuma_ino,M1,fact,fact_02,**Cursed Technique:** unknown<br><em>Able to manifest a drill-like object that pierces his opponent.</em>
+atsuya_kusakabe,M1,appearance,,
+atsuya_kusakabe,M1,fact,fact_01,A jujutsu sorcerer alumni from Tokyo Jujutsu Tech.
+mei_mei,M1,fact,fact_01,A jujutsu sorcerer alumni from Tokyo Jujutsu Tech.
+mei_mei,M1,fact,fact_10,Wields a giant axe as her preferred weapon.
+kento_nanami,M1,fact,fact_01,A jujutsu sorcerer alumni from Tokyo Jujutsu Tech.
+nanako_hasaba,M1,appearance,,
+nanako_hasaba,M1,reveal_identity,,
+nanako_hasaba,M1,fact,fact_01,An imprisoned child that was saved by Geto.
+mimiko_hasaba,M1,appearance,,
+mimiko_hasaba,M1,reveal_identity,,
+mimiko_hasaba,M1,fact,fact_01,An imprisoned child that was saved by Geto.
+miguel_oduol,M1,appearance,,
+miguel_oduol,M1,reveal_identity,,
+miguel_oduol,M1,fact,fact_01,An ally of Geto during the Night Parade of a Hundred Demons.
+miguel_oduol,M1,fact,fact_10,Wields a cursed tool rope that disrupts the techniques of those it hits.
+manami_suda,M1,appearance,,
+manami_suda,M1,fact,fact_01,An ally of Geto during the Night Parade of a Hundred Demons.
+larue,M1,appearance,,
+larue,M1,fact,fact_01,An ally of Geto during the Night Parade of a Hundred Demons.
+toshihisha_negi,M1,appearance,,
+toshihisha_negi,M1,fact,fact_01,An ally of Geto during the Night Parade of a Hundred Demons.
+satoru_gojo,M1,fact,fact_02,**Cursed Technique:** Limitless<br><em>Manipulates the space around himself and his techniques on an atomic level.</em>
+satoru_gojo,M1,fact,fact_04,His eyes are said to be the source of his power.
+kenjaku,M1,fact,fact_13,Attended Tokyo Jujutsu Tech with Gojo.
+satoru_gojo,M1,fact,fact_13,Attended Tokyo Jujutsu Tech with Geto.
+satoru_gojo,M1,relation,rel_01,Yuta Okkotsu *(distant relative)*
+yuta_okkotsu,M1,relation,rel_02,Satoru Gojo *(distant relative)*
+satoru_gojo,M1,relation,rel_02,Suguru Geto *(former best friend)*
+kenjaku,M1,relation,rel_01,Satoru Gojo *(former best friend)*
 --- Season 2 ---,,,,
 --- Episode 1 ---,,,,

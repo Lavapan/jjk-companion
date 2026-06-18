@@ -533,20 +533,31 @@ function updateSidebar(currentEpisode) {
         });
 
         // Build out final objects paired with their dynamic badge status.
-        const finalFacts = Array.from(uniqueFactsMap.values()).map(log => {
-            const key = log.info_id && log.info_id.trim() !== "" ? log.info_id : log.text_content;
-            const distinctEpisodes = historyCount.get(key);
-            
-            let status = "";
-            if (justWatchedEpisode && log.episode === justWatchedEpisode) {
-                status = (distinctEpisodes.size === 1) ? "NEW" : "UPDATED";
-            }
-            
-            return {
-                text: log.text_content,
-                status: status
-            };
-        });
+        const finalFacts = Array.from(uniqueFactsMap.values())
+            .sort((a, b) => {
+                // If either entry doesn't have an info_id, preserve their chronological order
+                if (!a.info_id || !b.info_id) return 0;
+
+                // Extract numbers from the info_id string (e.g., "fact_03" -> 3)
+                const numA = parseInt(a.info_id.replace(/\D/g, ""), 10) || 0;
+                const numB = parseInt(b.info_id.replace(/\D/g, ""), 10) || 0;
+
+                return numA - numB;
+            })
+            .map(log => {
+                const key = log.info_id && log.info_id.trim() !== "" ? log.info_id : log.text_content;
+                const distinctEpisodes = historyCount.get(key);
+                
+                let status = "";
+                if (justWatchedEpisode && log.episode === justWatchedEpisode) {
+                    status = (distinctEpisodes.size === 1) ? "NEW" : "UPDATED";
+                }
+                
+                return {
+                    text: log.text_content,
+                    status: status
+                };
+            });
 
         // Render UI using clean lists that support badge injection.
         let factsHTML = '';

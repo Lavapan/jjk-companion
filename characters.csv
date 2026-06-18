@@ -8,6 +8,7 @@ ryomen_sukuna,Ryomen Sukuna,images/sukuna_image.png,Antagonists,TRUE,Unknown,Mai
 masamichi_yaga,Masamichi Yaga,images/yaga_image.png,,TRUE,Unknown,Principal of Tokyo JJ Tech
 shoko_ieiri,Shoko Ieiri,images/shoko_image.png,Tokyo,TRUE,Unknown,Doctor
 kiyotaka_ijichi,Kiyotaka Ijichi,images/ijichi_image.png,Tokyo,TRUE,Unknown,Gojo assistant
+akari_nitta,Akari Nitta,images/akari_image.png,Tokyo,TRUE,Unknown,Same occupation as Ijichi
 maki_zenin,Maki Zenin,images/maki_image.png,"Tokyo, Zenin",TRUE,Unknown,No cursed energy
 toge_inumaki,Toge Inumaki,images/inumaki_image.png,Tokyo,TRUE,Unknown,Cursed speech user
 panda,Panda,images/panda_image.png,Tokyo,TRUE,Unknown,Panda
@@ -16,12 +17,12 @@ kinji_hakari,Kinji Hakari,images/hakari_image.png,Tokyo,TRUE,Unknown,Gambler
 kento_nanami,Kento Nanami,images/nanami_image.png,Tokyo,TRUE,Unknown,Yuji mentor
 takuma_ino,Takuma Ino,images/ino_image.png,Tokyo,TRUE,Unknown,Shiesty master
 utahime_iori,Utahime Iori,images/utahime_image.png,Kyoto,TRUE,Unknown,Priest lady
-kenjaku,Kenjaku,,Antagonists,TRUE,Unknown,Generational villain
+kenjaku,Kenjaku,images/kenjaku_image.png,Antagonists,TRUE,Unknown,Generational villain
 mahito,Mahito,images/mahito_image.png,Antagonists,TRUE,Unknown,Patchwork
 jogo,Jogo,images/jogo_image.png,Antagonists,TRUE,Unknown,Mountain man
 hanami,Hanami,images/hanami_image.png,Antagonists,TRUE,Unknown,Tree spirit
 dagon,Dagon,images/dagon_image.png,Antagonists,TRUE,Unknown,Octopus spirit
-uraume,Uraume,images/uraume_image.png,Antagonists,TRUE,Unknown,
+uraume,Uraume,images/uraume_image.png,Antagonists,TRUE,Unknown,bob-cut monk
 junpei_yoshino,Junpei Yoshino,images/junpei_image.png,Neutral,TRUE,Unknown,Sadge farmer
 aoi_todo,Aoi Todo,images/todo_image.png,Kyoto,TRUE,Unknown,Mentally ill best friend
 mai_zenin,Mai Zenin,images/mai_image.png,"Kyoto, Zenin",TRUE,Unknown,Gun-girl
@@ -31,27 +32,33 @@ mechamaru,Ultimate Mechamaru,images/mechamaru_image.png,Kyoto,TRUE,Unknown,Robo-
 momo_nishimiya,Momo Nishimiya,images/momo_image.png,Kyoto,TRUE,Unknown,Broom girl
 yoshinobu_gakuganji,Yoshinobu Gakuganji,images/yoshinobu_image.png,Kyoto,TRUE,Unknown,Principal of Kyoto JJ Tech
 mei_mei,Mei Mei,images/meimei_image.png,Tokyo,TRUE,Unknown,Weird crow lady
-tengen,Tengen,images/tengen_image.png,Tokyo,TRUE,Unknown,
-generic_silhouette,Silhouette for unrevealed characters,images/generic_image.png,HIDDEN,TRUE,,Used for unrevealed silhouettes
-major_clans,Major Clans,,SYSTEM,TRUE,,
-grade_scale,Grade Scale,,SYSTEM,TRUE,,Ranking system to determine grade
-curses,Curses,,SYSTEM,TRUE,,Essentially demons
-cursed_energy,Cursed Energy,,SYSTEM,TRUE,,Needed to activate cursed techniques
-cursed_technique,Cursed Technique,,SYSTEM,TRUE,,Techniques utilising Cursed Energy
-black_flash,Black Flash,,SYSTEM,TRUE,,Critical strikes
-personnel,Personnel,,SYSTEM,TRUE,,Support like Ijichi
-veil,Veil,,SYSTEM,TRUE,,A barrier that obstructs visions and also mobility
-domains,Domains,,SYSTEM,TRUE,,Domains
-binding_vows,Binding Vows,,SYSTEM,TRUE,,Pacts
+tengen,Tengen,images/tengen_image.png,Tokyo,TRUE,Unknown,barrier man
+atsuya_kusakabe,Atsuya Kusakabe,images/atsuya_image.png,Tokyo,TRUE,Unknown,longcoat guy
+generic_silhouette,Silhouette for unrevealed characters,images/generic_image.png,HIDDEN,TRUE,Unknown,Used for unrevealed silhouettes
+major_clans,Major Clans,,SYSTEM,TRUE,Unknown,
+grade_scale,Grade Scale,,SYSTEM,TRUE,Unknown,Ranking system to determine grade
+curses,Curses,,SYSTEM,TRUE,Unknown,Essentially demons
+cursed_energy,Cursed Energy,,SYSTEM,TRUE,Unknown,Needed to activate cursed techniques
+cursed_technique,Cursed Technique,,SYSTEM,TRUE,Unknown,Techniques utilising Cursed Energy
+black_flash,Black Flash,,SYSTEM,TRUE,Unknown,Critical strikes
+personnel,Personnel,,SYSTEM,TRUE,Unknown,Support like Ijichi
+veil,Veil,,SYSTEM,TRUE,Unknown,A barrier that obstructs visions and also mobility
+domains,Domains,,SYSTEM,TRUE,Unknown,Domains
+binding_vows,Binding Vows,,SYSTEM,TRUE,Unknown,Pacts
 naobito_zenin,Naobito Zenin,images/naobito_image.png,Zenin,TRUE,Unknown,Zenin Clan Leader
-juzo_kumiya,Juzo Kumiya,images/juzo_image.png,Antagonists,TRUE,Unknown,
-haruta_shigemo,Haruto Shigemo,images/shigemo_image.png,Antagonists,TRUE,Unknown,
-yuki_tsukumo,Yuki Tsukumo,images/yuki_image.png,Neutral,TRUE,Unknown,
-cursed_womb,Cursed Womb,,SYSTEM,TRUE,,
+juzo_kumiya,Juzo Kumiya,images/juzo_image.png,Antagonists,TRUE,Unknown,ed gein
+haruta_shigemo,Haruto Shigemo,images/shigemo_image.png,Antagonists,TRUE,Unknown,overalls guy
+yuki_tsukumo,Yuki Tsukumo,images/yuki_image.png,Neutral,TRUE,Unknown,"Nice fight, boy"
+cursed_womb,Cursed Womb,,SYSTEM,TRUE,Unknown,
 choso,Choso,images/choso_image.png,Antagonists,TRUE,Special,Death Painting 1
 eso,Eso,images/eso_image.png,Antagonists,TRUE,Special,Death Painting 2
 kechizu,Kechizu,images/kechizu_image.png,Antagonists,TRUE,Special,Death Painting 3
-akari_nitta,Akari Nitta,images/akari_image.png,Tokyo,TRUE,Unknown,Same occupation as Ijichi
-sukuna_fingers,Sukuna Fingers,,SYSTEM,TRUE,,Sukuna split 20 ways
-prison_realm,Prison Realm,,SYSTEM,TRUE,,
-sorcerers,Sorcerers,,SYSTEM,TRUE,,
+sukuna_fingers,Sukuna Fingers,,SYSTEM,TRUE,Unknown,Sukuna split 20 ways
+prison_realm,Prison Realm,,SYSTEM,TRUE,Unknown,
+sorcerers,Sorcerers,,SYSTEM,TRUE,Unknown,
+nanako_hasaba,Nanako Hasaba,images/nanako_image.png,Antagonists,TRUE,Unknown,Geto's ally
+mimiko_hasaba,Mimiko Hasaba,images/mimiko_image.png,Antagonists,TRUE,Unknown,Geto's ally
+manami_suda,Manami Suda,images/manami_image.png,Antagonists,TRUE,Unknown,Geto's ally
+miguel_oduol,Miguel,images/miguel_image.png,Antagonists,TRUE,Unknown,Geto's ally
+larue,Larue,images/larue_image.png,Antagonists,TRUE,Unknown,Geto's ally
+toshihisha_negi,Toshihisha Negi,images/toshihisha_image.png,Antagonists,TRUE,Unknown,Geto's ally
