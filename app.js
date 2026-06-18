@@ -129,7 +129,7 @@ function determinePortraitUrl(character, hasAppeared, characterLogs) {
     const hasAppearanceLog = characterLogs.some(log => log.info_type === 'appearance' || log.info_type === 'appearance_change');
 
     if (!hasAppearanceLog) {
-        return "images/generic_image.png"; 
+        return "images/generic.webp"; 
     }
 
     const portraitChanges = characterLogs.filter(log => log.info_type === 'appearance_change');
