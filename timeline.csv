@@ -315,6 +315,7 @@ major_clans,S1E18,appearance,,
 major_clans,S1E18,reveal_identity,,Three Major Clans
 major_clans,S1E18,fact,fact_01,**Zenin Clan**
 major_clans,S1E18,fact,fact_02,**Kamo Clan**
+major_clans,S1E18,fact,fact_03,Find out more.
 juzo_kumiya,S1E18,appearance,,
 juzo_kumiya,S1E18,fact,fact_01,A curse user working with Mahito and Hanami.
 juzo_kumiya,S1E18,fact,fact_10,"Obsessed with killing others and turning them into various items, such as racks and coats."
@@ -415,11 +416,10 @@ toge_inumaki,M1,fact,fact_10,The throat strain from using his cursed technique c
 kenjaku,M1,grade,,Special Grade
 kenjaku,M1,fact,fact_09,Was banished from Tokyo Jujutsu Tech after cursing a hundred normal people to death.
 kenjaku,M1,fact,fact_02,"**Cursed Technique:** Cursed Spirit Manipulation<br><em>Able to manipulate unbound curses. He can absorb them as orbs, summon, combine and command them.</em>"
-kenjaku,M1,fact,fact_11,"While originally believing that sorcerers must protect non-sorceres, he now looks down on those who can't use jujutsu or cursed energy, referring to them as 'monkeys'."
+kenjaku,M1,fact,fact_11,"While initially believing that sorcerers must protect non-sorceres, he now looks down on those who can't use jujutsu or cursed energy, referring to them as 'monkeys'."
 kenjaku,M1,fact,fact_12,"Wishes to bring about a paradise for jujutsu sorcerers, by dismantling the jujutsu society and dethroning normal humans as the ruling power."
 kenjaku,M1,fact,fact_12,"He is the leader of a religious group, using his position to collect curses from its followers."
 yuta_okkotsu,M1,fact,fact_12,"Has trouble sensing cursed energy, due to over-exposure to Rika's immense cursed energy."
-major_clans,M1,fact,fact_03,Find out more.
 maki_zenin,M1,fact,fact_10,"Became a jujutsu sorcerer to spite the Zenin clan, and planning to return as a Grade 1 sorcerer to take over as the head of the clan."
 takuma_ino,M1,fact,fact_01,A jujutsu sorcerer alumni from Tokyo Jujutsu Tech.
 takuma_ino,M1,fact,fact_02,**Cursed Technique:** unknown<br><em>Able to manifest a drill-like object that pierces his opponent.</em>
@@ -454,3 +454,59 @@ satoru_gojo,M1,relation,rel_02,Suguru Geto *(former best friend)*
 kenjaku,M1,relation,rel_01,Satoru Gojo *(former best friend)*
 --- Season 2 ---,,,,
 --- Episode 1 ---,,,,
+mei_mei,S2E01,appearance_change,,images/meimei_teen.webp
+utahime_iori,S2E01,appearance_change,,images/utahime_teen.webp
+satoru_gojo,S2E01,appearance_change,,images/gojo_teen.webp
+satoru_gojo,S2E01,fact,,Attended Tokyo Jujutsu Tech with Geto and Shoko.
+kenjaku,S2E01,appearance_change,,images/geto_teen.webp
+kenjaku,S2E01,fact,,Attended Tokyo Jujutsu Tech with Gojo and Shoko.
+shoko_ieiri,S2E01,appearance_change,,images/shoko_teen.webp
+shoko_ieiri,S2E01,fact,,Attended Tokyo Jujutsu Tech with Geto and Gojo.
+masamichi_yaga,S2E01,grade,,Grade 1
+masamichi_yaga,S2E01,appearance_change,,images/yaga_young.webp
+satoru_gojo,S2E01,fact,fact_10,Initially did not subscribe to the belief that sorcerers are obligated to protect the weak.
+tengen,S2E01,fact,fact_02,**Cursed Technique:** Immortality<br><em>Not much is known currently.</em>
+tengen,S2E01,fact,fact_10,"After aging to a certain point, his cursed technique begins rewriting his body, causing him to evolve. His Evolution would render him no longer human and ascend to a higher form, losing his human will.<br><em>Ceasing to be human, he would no longer feel obligated to aid humanity.</em>"
+tengen,S2E01,fact,fact_11,"Every 500 years, he assimilates with the Star Plasma Vessel, someone whose body is compatible with him. By renewing his body, his cursed technique resets and avoids Evolution."
+groups,S2E01,appearance
+groups,S2E01,reveal_identity,,Groups
+groups,S2E01,fact,fact_01,**Curse User Group Q:** Curse users that seek to upend jujutsu society by allowing Tengen to evolve and rampage on humanity.
+groups,S2E01,fact,fact_02,**Star Religious Group (Time Vessel Association):** Non-sorcerers that worship Tengen as a god. Disavows the assimilation of Tengen as it would sully his pure form with the impurity of the Star Plasma Vessel.
+toji_fushiguro,S2E01,appearance
+toji_fushiguro,S2E01,reveal_identity
+toji_fushiguro,S2E01,fact,fact_01,A man interested in the assassination of the Star Plasma Vessel.
+toji_fushiguro,S2E01,fact,fact_10,"Was originally a member of the Zenin clan, but left and took his wife's last name- Fushiguro."
+shiu_kong,S2E01,appearance,,
+shiu_kong,S2E01,fact,fact_01,"A man assisting Toji, managing his bounties."
+riko_amanai,S2E01,appearance
+riko_amanai,S2E01,fact,fact_01,"The Star Plasma Vessel, to be assimilated with Tengen for his body renewal."
+--- Episode 2 ---,
+toji_fushiguro,S2E02,fact,fact_04,Known as the 'Sorcerer Killer'.
+toji_fushiguro,S2E02,fact,fact_08,Has some sort of relation to Megumi.
+toji_fushiguro,S2E02,fact,fact_11,Was paid a 30-million deposit yen for the assassination of the Star Plasma Vessel.
+shoko_ieiri,S2E02,fact,fact_02,**Cursed Technique:** healing<br><em>Can use reverse cursed technique to heal others.</em>
+riko_amanai,S2E02,reveal_identity
+riko_amanai,S2E02,fact,fact_10,"Her parents died when she was young, leaving her an orphan cared by Kuroi."
+misato_kuroi,S2E02,appearance,,
+misato_kuroi,S2E02,reveal_identity
+misato_kuroi,S2E02,fact,fact_01,The caretaker of Riko.
+kenjaku,S2E02,fact,fact_02,"**Cursed Technique:** Curse Manipulation<br><em>Able to manipulate unbound curses. He can absorb them as orbs, summon, combine and command them.</em>"
+tengen,S2E02,fact,fact_12,Sits at the deepest floor of Tokyo Jujutsu High.
+tengen,S2E02,fact,fact_09,Serves as the foundation of all barriers at Jujutsu Tech. He maintains his own barriers and strengthens the barriers of others.
+satoru_gojo,S2E02,fact,fact_04,"Possesses both the Six Eyes and the Limitless cursed technique, the first in several centuries."
+--- Episode 3 ---
+misato_kuroi,S2E03,fact,fact_11,"Was taken hostage by the Star Religious Group, but was saved by Gojo, Geto and Riko."
+kento_nanami,S2E03,appearance_change,,images/nanami_teen.webp
+yu_haibara,S2E03,appearance
+yu_haibara,S2E03,reveal_identity
+yu_haibara,S2E03,fact,fact_01,A first-year student at Tokyo Jujutsu Tech during Nanami's student years.
+toji_fushiguro,S2E03,fact,fact_06,"Had once met a young Gojo and knew, from that encounter, that Gojo was not one to be taken lightly."
+toji_fushiguro,S2E03,fact,fact_11,"Was paid a 30-million deposit yen for the assassination of the Star Plasma Vessel, which he used to bait other curse others to attack Gojo, gradually wearing him down."
+toji_fushiguro,S2E03,fact,fact_05,"Accompanied by a cursed spirit wrapped around his torso, which he uses to store cursed tools and spirits inside."
+toji_fushiguro,S2E03,fact,fact_02,**Cursed Technique:** none<br><em>He possesses zero innate cursed energy.</em>
+toji_fushiguro,S2E03,fact,fact_03,"Born with a Heavenly Pact, much like Mechamaru and Maki. He has no cursed energy but in exchange, he possesses superhuman physical prowess."
+riko_amanai,S2E03,fact,fact_09,"Initially wanting to assimilate with Tengen, she yearned to continue living on as herself after the journey with Geto and Gojo."
+riko_amanai,S2E03,archived,,DEAD
+satoru_gojo,S2E03,fact,fact_05,Was seemingly killed by Toji.
+satoru_gojo,S2E03,archived,,MISSING
+--- Episode 4 ---

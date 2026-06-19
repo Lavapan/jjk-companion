@@ -457,11 +457,10 @@ function resolveLatestState(logs, charId, type, currentEpisode) {
     
     // Build output payload sorted strictly by numerical info_id order.
     return Array.from(map.values())
+        .filter(log => log.text_content && log.text_content.trim() !== "")
         .sort((a, b) => {
-            // If either entry doesn't have an info_id, preserve their chronological order.
             if (!a.info_id || !b.info_id) return 0;
 
-            // Extract just the numbers from the info_id string (e.g., "fact_05" -> 5, "fact_10" -> 10).
             const numA = parseInt(a.info_id.replace(/\D/g, ""), 10) || 0;
             const numB = parseInt(b.info_id.replace(/\D/g, ""), 10) || 0;
 
@@ -472,7 +471,6 @@ function resolveLatestState(logs, charId, type, currentEpisode) {
             const distinctEpisodes = historyCount.get(key);
             
             let status = "";
-            // If the entry's timestamp matches the episode they JUST finished watching, tag it.
             if (justWatchedEpisode && log.episode === justWatchedEpisode) {
                 status = (distinctEpisodes.size === 1) ? "NEW" : "UPDATED";
             }
@@ -534,11 +532,11 @@ function updateSidebar(currentEpisode) {
 
         // Build out final objects paired with their dynamic badge status.
         const finalFacts = Array.from(uniqueFactsMap.values())
+            // 🎯 FIX: Filter out system facts whose latest text_content is overridden to be blank
+            .filter(log => log.text_content && log.text_content.trim() !== "")
             .sort((a, b) => {
-                // If either entry doesn't have an info_id, preserve their chronological order
                 if (!a.info_id || !b.info_id) return 0;
 
-                // Extract numbers from the info_id string (e.g., "fact_03" -> 3)
                 const numA = parseInt(a.info_id.replace(/\D/g, ""), 10) || 0;
                 const numB = parseInt(b.info_id.replace(/\D/g, ""), 10) || 0;
 

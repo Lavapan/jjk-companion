@@ -15,6 +15,7 @@ panda,Panda,images/panda.webp,Tokyo,TRUE,Unknown,Panda
 yuta_okkotsu,Yuta Okkotsu,images/yuta.webp,Tokyo,TRUE,Unknown,Movie MC
 kinji_hakari,Kinji Hakari,images/hakari.webp,Tokyo,TRUE,Unknown,Gambler
 kento_nanami,Kento Nanami,images/nanami.webp,Tokyo,TRUE,Unknown,Yuji mentor
+yu_haibara,Yu Haibara,images/yu.webp,Tokyo,TRUE,Unknown,
 takuma_ino,Takuma Ino,images/ino.webp,Tokyo,TRUE,Unknown,Shiesty master
 utahime_iori,Utahime Iori,images/utahime.webp,Kyoto,TRUE,Unknown,Priest lady
 kenjaku,Kenjaku,images/kenjaku.webp,Antagonists,TRUE,Unknown,Generational villain
@@ -36,6 +37,7 @@ tengen,Tengen,images/tengen.webp,Tokyo,TRUE,Unknown,barrier man
 atsuya_kusakabe,Atsuya Kusakabe,images/atsuya.webp,Tokyo,TRUE,Unknown,longcoat guy
 generic_silhouette,Silhouette for unrevealed characters,images/generic.webp,HIDDEN,TRUE,Unknown,Used for unrevealed silhouettes
 major_clans,Major Clans,,SYSTEM,TRUE,Unknown,
+groups,Groups,,SYSTEM,TRUE,Unknown,Different groups relevant to story
 grade_scale,Grade Scale,,SYSTEM,TRUE,Unknown,Ranking system to determine grade
 curses,Curses,,SYSTEM,TRUE,Unknown,Essentially demons
 cursed_energy,Cursed Energy,,SYSTEM,TRUE,Unknown,Needed to activate cursed techniques
@@ -62,3 +64,7 @@ manami_suda,Manami Suda,images/manami.webp,Antagonists,TRUE,Unknown,Geto's ally
 miguel_oduol,Miguel,images/miguel.webp,Antagonists,TRUE,Unknown,Geto's ally
 larue,Larue,images/larue.webp,Antagonists,TRUE,Unknown,Geto's ally
 toshihisha_negi,Toshihisha Negi,images/toshihisha.webp,Antagonists,TRUE,Unknown,Geto's ally
+riko_amanai,Riko Amanai,images/riko.webp,Neutral,TRUE,Unknown,Star Plasma Vessel
+misato_kuroi,Misato Kuroi,images/kuroi.webp,Neutral,TRUE,Unknown,Riko's maid/surrogate mother
+toji_fushiguro,Toji Fushiguro,images/toji.webp,Antagonists,TRUE,Unknown,the curseless goat
+shiu_kong,Shiu Kong,images/shiu.webp,Neutral,TRUE,Unknown
