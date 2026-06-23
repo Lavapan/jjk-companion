@@ -23,6 +23,7 @@ body {
 
 /* Header Application Title */
 h1 {
+    font-family: 'Staatliches', sans-serif;
     font-size: 2.2rem;
     font-weight: 800;
     letter-spacing: -0.5px;
@@ -32,6 +33,14 @@ h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
     color: transparent;
+}
+
+.site-logo {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 /* The Dropdown Menu Box */
@@ -60,16 +69,14 @@ select#episodeSelect:hover {
     box-shadow: 0 0 0 2px rgba(255, 204, 0, 0.15);
 }
 
-/* Container for the nav items - Now permanently docked to the top */
 .nav-control-wrapper {
     display: flex;
     align-items: center;
     justify-content: flex-start; 
     gap: 12px;
-    margin-bottom: 32px;
+
     width: 100%;
     
-    /* 📌 STICKY CONFIGURATION */
     position: sticky;
     top: 0;
     z-index: 100; /* Stays above portraits and badges */
@@ -77,14 +84,13 @@ select#episodeSelect:hover {
     backdrop-filter: blur(8px); /* Smooth modern glass effect */
     -webkit-backdrop-filter: blur(8px);
     padding: 15px 0; /* Adds internal padding so it doesn't clip tightly */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .nav-btn {
     background-color: #16161a;
     color: #ffcc00;
     border: 1px solid #2d2d35;
-    height: 44px; /* Matches standard dropdown height */
+    height: 35px; /* Matches standard dropdown height */
     padding: 0 16px;
     border-radius: 8px;
     cursor: pointer;
@@ -102,6 +108,79 @@ select#episodeSelect:hover {
     cursor: not-allowed;
 }
 
+.header-actions {
+    position: relative;
+    display: inline-block;
+    margin-left: auto; /* 🎯 Pushes the button to the far right edge of the flex row */
+}
+
+/* Styled minimalist icon buttons to match buttons mockup.jpg */
+.action-btn {
+    background: transparent;
+    border: none;
+    color: #f3f4f6;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+    color: #ffcc00; /* Highlights red on hover */
+    background: #1e1802;
+}
+/* =========================================================================
+   CHANGELOGS BUTTON
+   ========================================================================= */
+.changelog-panel {
+    display: none; 
+    position: absolute;
+    top: 45px;      
+    right: 0;       /* Locks the drop panel right edge to the button right edge */
+    width: 320px;
+    max-height: 400px;
+    background-color: #121216;
+    border: 1px solid #27272a;
+    border-radius: 6px;
+    padding: 16px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;  
+}
+/* JavaScript toggles this class to pop it open */
+.changelog-panel.show {
+    display: block;
+}
+/* Minor styling for internal log items */
+.changelog-panel h3 {
+    margin-top: 0;
+    font-size: 1rem;
+    border-bottom: 1px solid #27272a;
+    padding-bottom: 8px;
+}
+.changelog-list {
+    overflow-y: auto;
+    max-height: 300px;
+}
+.log-item {
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed #27272a; /* Creates a subtle separation line between entries */
+}
+.log-item:last-child {
+    border-bottom: none; /* Removes the bottom border for the final item */
+}
+.log-date {
+    color: #ffcc00; /* Keeps your signature crimson highlight */
+    font-weight: bold;
+    font-size: 0.85rem;
+    display: inline-block;
+    margin-bottom: 4px; /* Gives spacing before the line break */
+}
+.log-content {
+    font-size: 0.85rem;
+    color: #e4e4e7;
+    line-height: 1.4;
+}
 /* =========================================================================
    THE NOTIFICATION BANNER (Spoiler Warnings)
    ========================================================================= */
@@ -111,20 +190,15 @@ select#episodeSelect:hover {
     padding: 16px 20px;
     border-radius: 0 8px 8px 0;
     margin-bottom: 32px;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     color: #d1d1d6;
     line-height: 1.6;
-    max-width: 1000px; 
+    max-width: 2000px; 
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 #companionNotice strong {
     color: #ffffff;
-}
-
-#companionNotice em {
-    color: #a1a1aa;
-    font-style: italic;
 }
 
 #characterGrid {
@@ -530,12 +604,6 @@ select#episodeSelect:hover {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Adds a subtle separator line */
 }
 
-/* Ensure each glossary item has some space from the one above it */
-.lore-item {
-    margin-top: 15px; 
-    font-size: 0.85rem;
-}
-
 .glossary-card {
     /* Your existing styles (background, padding, etc.) */
     margin-bottom: 10px; /* Add this line to create the gap */
@@ -563,7 +631,7 @@ select#episodeSelect:hover {
 
 .changelogs-section {
     background: #111111; /* Matches your other dark containers */
-    padding: 20px;
+    padding: 30px;
     margin-top: 60px;
     border-radius: 8px;
     color: #e0e0e0;
@@ -594,8 +662,6 @@ select#episodeSelect:hover {
     color: #ffffff;
     background-color: rgba(0, 229, 255, 0.1);
 }
-
-/* --- Character Card States --- */
 
 /* Cleaned Status Classes */
 .character-card.status-missing::before {

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jujutsu Kaisen Companion Handbook</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <img src="images/SiteLogo.svg" alt="JJK Companion Handbook" class="site-logo">
+    </header>
+
+    <div class="nav-control-wrapper">
+          <button id="prevEp" class="nav-btn">← Prev</button>
+          <select id="episodeSelect"></select>
+         <button id="nextEp" class="nav-btn">Next →</button>
+
+             <div class="header-actions">
+                <!-- Button using a document/list icon layout -->
+                <button id="changelogBtn" class="action-btn" title="View Changelogs">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                </button>
+
+                <div id="changelogPanel" class="changelog-panel">
+                    <h3>Changelog History</h3>
+                    <div class="changelog-list">
+                        </div>
+                </div>
+            </div>
+    </div>
+
+    <div class="app-layout">
+        
+        <aside class="lore-sidebar" id="loreSidebar">
+            <h2 class="sidebar-title">FIELD GUIDE</h2>
+            <div id="loreListContainer"></div>
+        </aside>
+
+        <main class="main-content">
+            <div id="companionNotice" class="notice-banner"></div>
+            
+            <div class="grid-wrapper">
+                <div id="characterGrid"></div>
+            </div>
+        </main>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

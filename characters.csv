@@ -39,6 +39,7 @@ generic_silhouette,Silhouette for unrevealed characters,images/generic.webp,HIDD
 major_clans,Major Clans,,SYSTEM,TRUE,Unknown,
 groups,Groups,,SYSTEM,TRUE,Unknown,Different groups relevant to story
 grade_scale,Grade Scale,,SYSTEM,TRUE,Unknown,Ranking system to determine grade
+grade_advancement,Grade Advancement,,SYSTEM,TRUE,Unknown,How to advance grades
 curses,Curses,,SYSTEM,TRUE,Unknown,Essentially demons
 cursed_energy,Cursed Energy,,SYSTEM,TRUE,Unknown,Needed to activate cursed techniques
 cursed_technique,Cursed Technique,,SYSTEM,TRUE,Unknown,Techniques utilising Cursed Energy
@@ -50,14 +51,14 @@ binding_vows,Binding Vows,,SYSTEM,TRUE,Unknown,Pacts
 naobito_zenin,Naobito Zenin,images/naobito.webp,Zenin,TRUE,Unknown,Zenin Clan Leader
 juzo_kumiya,Juzo Kumiya,images/juzo.webp,Antagonists,TRUE,Unknown,ed gein
 haruta_shigemo,Haruto Shigemo,images/shigemo.webp,Antagonists,TRUE,Unknown,overalls guy
-yuki_tsukumo,Yuki Tsukumo,images/yuki.webp,Neutral,TRUE,Unknown,"Nice fight, boy"
+yuki_tsukumo,Yuki Tsukumo,images/yuki_alt.webp,Neutral,TRUE,Unknown,"Nice fight, boy"
 cursed_womb,Cursed Womb,,SYSTEM,TRUE,Unknown,
 choso,Choso,images/choso.webp,Antagonists,TRUE,Special,Death Painting 1
 eso,Eso,images/eso.webp,Antagonists,TRUE,Special,Death Painting 2
 kechizu,Kechizu,images/kechizu.webp,Antagonists,TRUE,Special,Death Painting 3
 sukuna_fingers,Sukuna Fingers,,SYSTEM,TRUE,Unknown,Sukuna split 20 ways
 prison_realm,Prison Realm,,SYSTEM,TRUE,Unknown,
-sorcerers,Sorcerers,,SYSTEM,TRUE,Unknown,
+sorcerers,Sorcerers,,SYSTEM,TRUE,Unknown,types of cursed energy users
 nanako_hasaba,Nanako Hasaba,images/nanako.webp,Antagonists,TRUE,Unknown,Geto's ally
 mimiko_hasaba,Mimiko Hasaba,images/mimiko.webp,Antagonists,TRUE,Unknown,Geto's ally
 manami_suda,Manami Suda,images/manami.webp,Antagonists,TRUE,Unknown,Geto's ally
@@ -68,3 +69,4 @@ riko_amanai,Riko Amanai,images/riko.webp,Neutral,TRUE,Unknown,Star Plasma Vessel
 misato_kuroi,Misato Kuroi,images/kuroi.webp,Neutral,TRUE,Unknown,Riko's maid/surrogate mother
 toji_fushiguro,Toji Fushiguro,images/toji.webp,Antagonists,TRUE,Unknown,the curseless goat
 shiu_kong,Shiu Kong,images/shiu.webp,Neutral,TRUE,Unknown
+episode_status,Episode Status,,SYSTEM,TRUE,Unknown,for WIP recaps

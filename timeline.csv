@@ -40,7 +40,7 @@ yuji_itadori,S1E02,fact,fact_08,To be executed once he had absorbed all of Sukun
 yuji_itadori,S1E02,fact,fact_01,A first-year student at Tokyo Jujutsu Tech.
 yuji_itadori,S1E02,fact,fact_04,Has absorbed 2 Sukuna fingers.
 satoru_gojo,S1E02,affiliation_change,,Tokyo
-satoru_gojo,S1E02,S1E02,fact_01,"A Tokyo Jujutsu Tech teacher, in charge of the first-year students."
+satoru_gojo,S1E02,fact,fact_01,"A Tokyo Jujutsu Tech teacher, in charge of the first-year students."
 nobara_kugisaki,S1E02,appearance,,
 megumi_fushiguro,S1E02,fact,fact_01,A first-year student at Tokyo Jujutsu Tech.
 megumi_fushiguro,S1E02,affiliation_change,,Tokyo
@@ -116,7 +116,7 @@ satoru_gojo,S1E05,grade,,Special Grade
 domains,S1E06,fact,fact_01,**Innate Domain:** The mindspace of an individual that can manifest physically.
 binding_vows,S1E06,appearance,,
 binding_vows,S1E06,reveal_identity,,Pacts
-binding_vows,S1E06,fact,fact_01,**Binding Vows:** Pacts that create conditions for users themselves or agreements with others that can hinder and benefit.
+binding_vows,S1E06,fact,fact_02,**Binding Vows:** Pacts that create conditions for users themselves or agreements with others that can hinder and benefit.
 satoru_gojo,S1E06,fact,fact_11,"Seeks to foster a new, strong generation of jujutsu sorcerers to reform the conservative jujutsu society."
 kinji_hakari,S1E06,mention,,???
 kinji_hakari,S1E06,reveal_identity,,
@@ -193,7 +193,7 @@ kento_nanami,S1E09,fact,fact_10,"Studied at Jujutsu Tech, became a normal salary
 kento_nanami,S1E09,grade,,Grade 1
 kento_nanami,S1E09,fact,fact_02,"**Cursed Technique:** Ratio Technique<br><em>Creates a line where a weak point is created at the 7:3 ratio length which, if attacked, causes a critical hit, amplifying his damage.</em>"
 kento_nanami,S1E09,fact,fact_11,Hates things that he finds a hassle and putting in more effort than necessary.
-binding_vows,S1E09,fact,fact_02,**Revealing One's Hand:** A pact that increases the effectiveness of one's technique by revealing the mechanics of the technique to the opponent.
+binding_vows,S1E09,fact,fact_03,**Revealing One's Hand:** A pact that increases the effectiveness of one's technique by revealing the mechanics of the technique to the opponent.
 yuji_itadori,S1E09,fact,fact_02,"**Cursed Technique:** Divergent Fist<br><em>Does not have an innate cursed technique, but channels cursed energy to supplement his attacks.</em>"
 jogo,S1E09,fact,fact_11,A cursed spirit born from the fear of the earth.
 jogo,S1E09,fact,fact_02,**Cursed Technique:** fire manipulation<br><em>Able to perform techniques that are based around fire and earth.</em>
@@ -215,7 +215,7 @@ mahito,S1E10,grade,,Special Grade
 mahito,S1E10,fact,fact_02,"**Cursed Technique:** Idle Transfiguration<br><em>Alters souls, transfiguring the body's form and nature.</em>"
 mahito,S1E10,,fact_08,Keeps a supply of shrunken transfigured humans on him to be used as tools.
 --- Episode 11 ---,,,,
-binding_vows,S1E11,fact,fact_01,**Binding Vows:** Pacts that create conditions for users themselves or agreements with others that can hinder and benefit. It can be set-up based on time or self-restrictions.
+binding_vows,S1E11,fact,fact_02,**Binding Vows:** Pacts that create conditions for users themselves or agreements with others that can hinder and benefit. It can be set-up based on time or self-restrictions.
 junpei_yoshino,S1E11,relation,rel_01,Nagi Yoshino *(mother)* **†**
 junpei_yoshino,S1E11,fact,fact_12,"Has cigarettes burn scars on his forehead from his bullies, which he covers over with his hair."
 junpei_yoshino,S1E11,fact,fact_11,Was deceived by Mahito into thinking that the ones who caused his mother's death were his bullies.
@@ -281,7 +281,7 @@ maki_zenin,S1E16,grade,,Grade 4
 mechamaru,S1E16,grade,,Semi-Grade 1
 mechamaru,S1E16,appearance_change,,images/kokichi.webp
 mechamaru,S1E16,fact,fact_02,"**Cursed Technique:** puppet manipulation<br><em>Remotely controls a humanoid puppet, Ultimate Mechamaru, which is fitted with different weaponry.</em>"
-binding_vows,S1E16,fact,fact_03,**Heavenly Pacts:** Pacts that are forced upon the body from birth. It can have massive trade-offs.
+binding_vows,S1E16,fact,fact_04,**Heavenly Pacts:** Pacts that are forced upon the body from birth. It can have massive trade-offs.
 mechamaru,S1E16,fact,fact_10,"Due to his Heavenly Pact, he was born without majority of his limbs, has fragile skin that burns from light and lives in constant pain.<br>In exchange, he has the ability to use cursed techniques over long distances, as well as immense cursed energy production."
 mechamaru,S1E16,fact,fact_11,"He hopes to find a way to restore or obtain a normal, healthy body."
 --- Episode 17 ---,,,,
@@ -403,6 +403,11 @@ choso,S1E24,fact,fact_01,The incarnated Death Painting One.
 choso,S1E24,relation,rel_01,Kechizu *(younger brother)* **†**
 choso,S1E24,relation,rel_02,Eso *(younger brother)* **†**
 yuji_itadori,S1E24,fact,fact_04,Has absorbed 4 Sukuna fingers.
+yuji_itadori,S1E24,fact,fact_13,Recommended for advancement to Grade 1 by Todo and Mei Mei.
+megumi_fushiguro,S1E24,fact,fact_13,Recommended for advancement to Grade 1 by Todo and Mei Mei.
+nobara_kugisaki,S1E24,fact,fact_13,Recommended for advancement to Grade 1 by Todo and Mei Mei.
+panda,S1E24,fact,fact_13,Recommended for advancement to Grade 1 by Todo and Mei Mei.
+maki_zenin,S1E24,fact,fact_13,Recommended for advancement to Grade 1 by Todo and Mei Mei.
 --- Movie 1 ---,,,,
 yuta_okkotsu,M1,fact,fact_10,"Rika, coined ""Queen of Curses"" by Geto, was a special grade cursed spirit, manifested by Yuta when he rejected her death, accidentally cursing her into a cursed spirit. She has since been freed."
 yuta_okkotsu,M1,grade,,Special Grade
@@ -457,11 +462,11 @@ kenjaku,M1,relation,rel_01,Satoru Gojo *(former best friend)*
 mei_mei,S2E01,appearance_change,,images/meimei_teen.webp
 utahime_iori,S2E01,appearance_change,,images/utahime_teen.webp
 satoru_gojo,S2E01,appearance_change,,images/gojo_teen.webp
-satoru_gojo,S2E01,fact,,Attended Tokyo Jujutsu Tech with Geto and Shoko.
+satoru_gojo,S2E01,fact,fact_13,Attended Tokyo Jujutsu Tech with Geto and Shoko.
 kenjaku,S2E01,appearance_change,,images/geto_teen.webp
-kenjaku,S2E01,fact,,Attended Tokyo Jujutsu Tech with Gojo and Shoko.
+kenjaku,S2E01,fact,fact_13,Attended Tokyo Jujutsu Tech with Gojo and Shoko.
 shoko_ieiri,S2E01,appearance_change,,images/shoko_teen.webp
-shoko_ieiri,S2E01,fact,,Attended Tokyo Jujutsu Tech with Geto and Gojo.
+shoko_ieiri,S2E01,fact,fact_13,Attended Tokyo Jujutsu Tech with Geto and Gojo.
 masamichi_yaga,S2E01,grade,,Grade 1
 masamichi_yaga,S2E01,appearance_change,,images/yaga_young.webp
 satoru_gojo,S2E01,fact,fact_10,Initially did not subscribe to the belief that sorcerers are obligated to protect the weak.
@@ -510,3 +515,54 @@ riko_amanai,S2E03,archived,,DEAD
 satoru_gojo,S2E03,fact,fact_05,Was seemingly killed by Toji.
 satoru_gojo,S2E03,archived,,MISSING
 --- Episode 4 ---
+toji_fushiguro,S2E04,fact,fact_04,"Due to having no innate cursed energy, his presence is invisible to sorcerers, who rely on sensing cursed energy to detect the presence of others."
+toji_fushiguro,S2E04,fact,fact_05,"Has a cursed spirit, which he uses to store cursed tools, spirits and more inside. By shrinking and storing it inside his stomach, he's able to prevent its cursed energy from being sensed by others."
+toji_fushiguro,S2E04,fact,fact_03,"Born with a Heavenly Pact, much like Mechamaru and Maki. He has no cursed energy but in exchange, he possesses superhuman physical prowess and his 5 senses enhanced."
+misato_kuroi,S2E04,archived,,DEAD
+kenjaku,S2E04,fact,fact_02,"**Cursed Technique:** Curse Manipulation<br><em>Able to manipulate unbound curses. He can absorb them as orbs, summon, combine and command them. If he is roughly stronger by 2 grades-worth, he is able to absorb them without needing to force their submission.</em>"
+toji_fushiguro,S2E04,fact,fact_08,
+toji_fushiguro,S2E04,relation,rel_01,Megumi Fushiguro *(son)*
+toji_fushiguro,S2E04,archived,,DEAD
+megumi_fushiguro,S2E04,relation,rel_02,Toji Fushiguro *(father)*
+shiu_kong,S2E04,fact,fact_01,A mediator who works with Toji.
+satoru_gojo,S2E04,archived,,ACTIVE
+satoru_gojo,S2E04,fact,fact_09,Regarded as the strongest jujutsu sorcerer of the modern age.
+satoru_gojo,S2E04,fact,fact_05
+--- Episode 5 ---,
+satoru_gojo,S2E05,fact,fact_14,"After his battle with Toji, he had awakened to a new, profound understanding of cursed energy, skyrocketing his grasp on cursed techniques and his power."
+satoru_gojo,S2E05,fact,fact_10,"Initially did not subscribe to the belief that sorcerers are obligated to protect the weak, but has since changed his worldview."
+kenjaku,S2E05,fact,fact_08,"Is to be executed under jujutsu law after cursing 112 people to death, as well as his parents."
+kenjaku,S2E05,fact,fact_09,"The events of the Star Plasma Vessel caused him to change his worldview on people. He wishes to create a world of only jujutsu sorcerers, calling those without cursed energy 'monkeys' and useless."
+kenjaku,S2E05,fact,fact_11,
+yuki_tsukumo,S2E05,appearance_change,,images/yuki.webp
+yuki_tsukumo,S2E05,reveal_identity
+yuki_tsukumo,S2E05,grade,,Special Grade
+yuki_tsukumo,S2E05,fact,fact_10,"Is not looked upon fondly by Jujutsu High, as she rarely accepts missions and is often travelling."
+yuki_tsukumo,S2E05,fact,fact_11,"Hopes to create a world where curses aren't born, as opposed to jujutsu society's view of exorcising curses."
+yu_haibara,S2E05,fact,fact_10,Died during a joint mission with Nanami.
+yu_haibara,S2E05,archived,,DEAD
+satoru_gojo,S2E05,appearance_change,,images/gojo.webp
+kenjaku,S2E05,appearance_change,,images/geto.webp
+kento_nanami,S2E05,appearance_change,,images/nanami.webp
+mei_mei,S2E05,appearance_change,,images/meimei.webp
+utahime_iori,S2E05,appearance_change,,images/utahime.webp
+shoko_ieiri,S2E05,appearance_change,,images/shoko.webp
+masamichi_yaga,S2E05,appearance_change,,images/yaga.webp
+--- Episode 6 ---
+grade_advancement,S2E06,appearance,,
+grade_advancement,S2E06,reveal_identity,,Grade Advancement
+grade_advancement,S2E06,fact,fact_01,"For Grade 2 and Grade 1, advancements are done differently from lower grades."
+grade_advancement,S2E06,fact,fact_02,"Those recommended by at least two Grade 1 sorcerers for advancement, must carry out missions alongside a Grade 1 sorcerer or higher.<br><em>Sorcerers who initially recommended them cannot be assigned to accompany them on missions.</em>"
+grade_advancement,S2E06,fact,fact_03,"Once deemed fit, they'll be promoted to Semi-Grade, at which point, they must carry out a solo mission of the grade they're advancing to.<br><em>The results of said mission determines whether they successfully advance their grade or not.</em>"
+yuji_itadori,S2E06,relation,rel_02,Yuki Ozawa *(middle-school classmate)*
+mechamaru,S2E06,name_override,,Kokichi Muta
+mechamaru,S2E06,appearance_change,,images/kokichi_healed.webp
+mechamaru,S2E06,fact,fact_06,"He is the mole that has been leaking information about Jujutsu High to Geto and his group.<br><em>He made a pact with them; in exchange for information, Mahito would use Idle Transfiguration to fix his body.</em>"
+mechamaru,S2E06,fact,fact_07,"Betraying Geto and Mahito, he devises a plan to contact Gojo to inform him of the ""Shibuya plot""."
+mechamaru,S2E06,fact,fact_02,"**Cursed Technique:** puppet manipulation<br><em>Remotely controls humanoid puppets, mainly Ultimate Mechamaru, which are fitted with different weaponry. His range extends throughout all of Japan.</em>"
+mechamaru,S2E06,fact,fact_10,"Pilots a giant mech named ""Mechamaru"", that stores years worth of cursed energy to be used as its power source for attacks."
+mechamaru,S2E06,fact,fact_11,"He resides in an underground facility, fitted with a tub filled with liquid, with various pipes connected to it."
+mechamaru,S2E06,relation,rel_01,Kasumi Miwa *(crush)*
+binding_vows,S2E06,fact,fact_01,"Pacts, when broken, can carry heavy penalties. The nature and extent of these penalties can be an enigma."
+,S2E06
+,S2E06

@@ -4,40 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jujutsu Kaisen Companion Handbook</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css"> <!-- Reuses your global dark styling -->
+    <style>
+        body {
+            /* 1. Point to your poster image file path */
+            background-image: linear-gradient(rgba(10, 10, 12, 0.90), rgba(10, 10, 12, 0.90)), url('images/background.webp');
+            
+            /* 2. Scale and lock the image so it doesn't repeat or stretch weirdly */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            
+            /* 3. Global fallbacks */
+            background-color: #0a0a0c;
+            color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+        }
+        /* Apply the clean, modern system stack globally to match the main app */
+        body, p, span, a {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+        }
+        /* Give your headings a slightly sharper, premium weight to stand out */
+        h1, h2, .portal-btn {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-weight: 700;       /* Bold and punchy */
+            letter-spacing: 0.5px;  /* Clean modern letter tracking */
+        }
+        /* Lightweight custom styles just for the landing layout */
+        .landing-container {
+            max-width: 650px;
+            margin: 210px auto;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .site-logo {
+            max-width: 800px;
+            width: 100%;
+            height: auto;
+        }
+        .tagline {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            margin-bottom: 90px;
+            font-style: italic;
+        }
+        .rules-box p {
+            font-size: 0.95rem;
+            color: #d4d4d8 !important;
+        }
+        .rules-box {
+            background-color: #121216;
+            border: 1px solid #27272a;
+            border-radius: 8px;
+            padding: 25px;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+        .rules-box h2 {
+            margin-top: 0;
+            color: #ffcc00;
+            font-size: 1.3rem;
+        }
+        .portal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+        }
+        .portal-btn {
+            display: block;
+            background: #18181b;
+            color: #f3f4f6;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #3f3f46;
+            font-weight: bold;
+            transition: all 0.2s ease;
+        }
+        .portal-btn:hover {
+            background: #715d0e;
+            border-color: #ffcc00;
+            transform: translateY(-2px);
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <h1>JJK Companion Handbook</h1>
-    </header>
-
-    <div class="nav-control-wrapper">
-          <button id="prevEp" class="nav-btn">← Prev</button>
-          <select id="episodeSelect"></select>
-         <button id="nextEp" class="nav-btn">Next →</button>
-    </div>
-
-    <div class="app-layout">
+    <div class="landing-container">
+        <!-- Your brand new SVG Logo Method 1 -->
+        <img src="images/SiteLogo.svg" alt="Jujutsu Kaisen Companion Handbook" class="site-logo">
         
-        <aside class="lore-sidebar" id="loreSidebar">
-            <h2 class="sidebar-title">GLOSSARY</h2>
-            <div id="loreListContainer"></div>
-        </aside>
+        <p class="tagline">A handbook to keep track of relevant information during your watching experience.</p>
 
-        <main class="main-content">
-            <div id="companionNotice" class="notice-banner"></div>
-            <div id="characterGrid"></div>
-        </main>
+        <div class="rules-box">
+            <h2>Welcome to the JJK Companion Handbook!</h2>
+            <p>Use the <strong>dropdown</strong> or <strong>buttons</strong> to navigate between episodes.</p>
+            <p>To keep your experience completely spoiler-free, this site always recaps information <strong>up to the previous episode</strong> of whatever you select.</p>
+            <p style="font-size: 0.85rem; color: #a1a1aa;"><em>(Example: Selecting "Episode 15" will safely recap information revealed during Episodes 1 through 14 without spoiling Episode 15.)</em></p>
+        </div>
 
+        <div class="portal-grid">
+            <!-- URL parameters pass the desired episode into the handbook page -->
+            <a href="handbook.html" class="portal-btn">Start Recapping</a>
+        </div>
     </div>
 
-    <section id="changelogs" class="changelogs-section">
-        <h3>Changelogs</h3>
-        <ul>
-            </ul>
-    </section>
-
-    <script src="app.js"></script>
 </body>
 </html>

@@ -87,6 +87,24 @@ function parseCSV(text) {
     return result;
 }
 
+function setEpisodeFromURL() {
+    const selectElement = document.getElementById("episodeSelect");
+    if (!selectElement) return;
+
+    // Look at the web browser's address bar (ex: handbook.html?ep=S2E01)
+    const urlParams = new URLSearchParams(window.location.search);
+    const targetEpisode = urlParams.get('ep');
+
+    // If a valid parameter exists, force the dropdown value to match it
+    if (targetEpisode && chronologicalTimeline.includes(targetEpisode)) {
+        selectElement.value = targetEpisode;
+    }
+}
+
+// Fire the parameter configuration check right before syncing your database files
+setEpisodeFromURL();
+loadLiveData();
+
 // Reaches out to your local files and boots the site.
 async function loadLiveData() {
     try {
@@ -157,6 +175,30 @@ function getLatestInfo(charId, type, currentEpisode, logs) {
     return history[history.length - 1]; 
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+    const changelogBtn = document.getElementById("changelogBtn");
+    const changelogPanel = document.getElementById("changelogPanel");
+
+    if (changelogBtn && changelogPanel) {
+        changelogBtn.addEventListener("click", (e) => {
+            e.stopPropagation(); // Prevents click events from instantly bubbling up
+            changelogPanel.classList.toggle("show");
+        });
+
+        document.addEventListener("click", (e) => {
+            const isClickInsidePanel = changelogPanel.contains(e.target);
+            const isClickOnToggleBtn = e.target === changelogBtn;
+            const isClickOnNavControls = e.target.closest('#prevEp') || 
+                                         e.target.closest('#nextEp') || 
+                                         e.target.closest('#episodeSelect');
+
+            if (!isClickInsidePanel && !isClickOnToggleBtn && !isClickOnNavControls) {
+                changelogPanel.classList.remove("show");
+            }
+        });
+    }
+});
+
 // =========================================================================
 // MAIN ENGINE FUNCTION: Renders the fighter-select layout
 // =========================================================================
@@ -178,14 +220,14 @@ function renderCompanionWebsite() {
         if (companionNotice) {
             companionNotice.style.display = "block";
             companionNotice.innerHTML = `
-                <strong>Welcome to the Companion Handbook!</strong><br>
-                To keep your experience completely spoiler-free, this app always recaps information 
-                <strong>up to the previous episode</strong> of what you select.<br>
-                (<em>Ex. Selecting "Episode 15" recaps information from Episodes 1 through 14</em>)<br><br>
-                Switch the dropdown to the episode you're <strong>currently watching</strong> to start recapping!
+                <strong>As you progress through the series, character cards and their information will appear here.</em></strong><br>
+
+                Keep watching to find out more!<br><br>
+                Switch the dropdown to the episode you're <strong>currently watching</strong> to start recapping!<br>
+                Otherwise, click on the "Next" button to proceed to the next episode.
             `;
         }
-        loreContainer.innerHTML = '<p style="color: #ffffff; font-size: 1.0rem; text-align: left;"><em>As you progress through the series, key world-building notes will appear here.</em></p>'; 
+        loreContainer.innerHTML = '<p style="color: #ffffff; font-size: 1.0rem; text-align: left;"><em>As you progress through the series, key terminology and details will appear here.</em></p>'; 
         return;
     } else {
         if (companionNotice) {
@@ -626,16 +668,28 @@ function formatText(text) {
 }
 
 function renderChangelog() {
-    const logContainer = document.querySelector('#changelogs ul'); 
+    // 🎯 Update target selector to match your new floating dropdown panel container
+    const logContainer = document.querySelector('.changelog-list'); 
     if (!logContainer) return; 
     
     logContainer.innerHTML = ""; 
     
+    // Reverse the log entries so the most recent updates show up first
     const sortedLogs = [...changelogs].reverse(); 
     
-    sortedLogs.forEach(entry => {
-        const li = document.createElement('li');
-        li.innerHTML = `<strong>${entry.date}:</strong> ${entry.update_note}`;
-        logContainer.appendChild(li);
+    sortedLogs.forEach(log => {
+        // Skip blank rows or incomplete data from the CSV parsing
+        if (!log.date || !log.update_note) return;
+
+        const logItem = document.createElement('div');
+        logItem.className = 'log-item';
+        
+        // Format layout: Date, followed by a clean line break, followed by formatted notes
+        logItem.innerHTML = `
+            <span class="log-date">${log.date}</span>
+            <div class="log-content">${formatText(log.update_note)}</div>
+        `;
+        
+        logContainer.appendChild(logItem);
     });
 }
