@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 774 89" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="Artboard1" transform="matrix(1,0,0,1,-115.664,-112.638)">
+        <rect x="115.664" y="112.638" width="774" height="89" style="fill:none;"/>
+        <clipPath id="_clip1">
+            <rect x="115.664" y="112.638" width="774" height="89"/>
+        </clipPath>
+        <g clip-path="url(#_clip1)">
+            <g transform="matrix(3.82916,0,0,1.15018,-3006.12,-481.88)">
+                <g transform="matrix(0.3,0,0,1,571.514,0)">
+                    <g transform="matrix(72,0,0,72,1477.7,569.054)">
+                    </g>
+                    <text x="816.449px" y="569.054px" style="font-family:'JujutsuKaisen', 'Jujutsu Kaisen';font-size:72px;fill:white;">JJK Companion Handbook</text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
