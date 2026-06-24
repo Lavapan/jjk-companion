@@ -22,18 +22,6 @@ body {
 }
 
 /* Header Application Title */
-h1 {
-    font-family: 'Staatliches', sans-serif;
-    font-size: 2.2rem;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-    margin-bottom: 24px;
-    background: linear-gradient(45deg, #ffffff, #a1a1aa);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    color: transparent;
-}
 
 .site-logo {
     max-width: 600px;
@@ -217,6 +205,10 @@ select#episodeSelect:hover {
     flex-direction: column;
     border: 1px solid #24242b;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 440px;
 
     transition: transform 0.25s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.25s ease;
     will-change: transform; /* Prepares the browser's graphics card for a smooth lift */
@@ -321,6 +313,7 @@ select#episodeSelect:hover {
     border: 1px solid rgba(27, 150, 172, 0.3);
 }
 
+.grade-badge.special-grade-1,
 .grade-badge.special-grade {
     color: #f87171; /* Threatening red for Special Grade */
     border: 1px solid rgba(248, 113, 113, 0.5);
@@ -350,12 +343,6 @@ select#episodeSelect:hover {
 /* =========================================================================
    3. TEXT CONTENT AREA & THE SLIDING REVEAL DRAWER
    ========================================================================= */
-.character-card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-height: 440px;
-}
 
 .card-details {
     padding: 12px 16px 16px 16px;
@@ -574,13 +561,50 @@ select#episodeSelect:hover {
     align-items: flex-start;   /* 🟢 CRITICAL: Prevents columns from stretching unevenly or collapsing down */
     gap: 24px;
     width: 100%;
+    position: relative; /* anchors nothing directly, but keeps stacking context sane */
+}
+
+.app-layout.is-wip .lore-sidebar,
+.app-layout.is-wip .main-content {
+    filter: blur(3px);
+    pointer-events: none;   /* prevents interacting with stale info */
+    user-select: none;
+    transition: filter 0.3s ease;
+}
+
+.wip-overlay {
+    display: none;
+    position: fixed;        /* stays centered in viewport even if the grid is tall */
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 150;            /* above nav (100), below changelog panel (1000) */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    pointer-events: none;
+}
+
+.app-layout.is-wip .wip-overlay {
+    display: flex;
+}
+
+.wip-overlay-content p {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffcc00;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.85);
+    max-width: 480px;
+    margin: 0 auto;
+    background: rgba(10, 10, 12, 0.55);
+    padding: 18px 24px;
+    border-radius: 10px;
 }
 
 .lore-sidebar {
     width: 210px;
     min-width: 210px; 
     flex-shrink: 0;   
-    background: #1d1d1d; 
+    background: #16161a;
     border: 1px solid rgba(250, 250, 250, 0.15);
     border-radius: 8px;
     padding: 18px;
@@ -605,16 +629,61 @@ select#episodeSelect:hover {
 }
 
 .glossary-card {
-    /* Your existing styles (background, padding, etc.) */
-    margin-bottom: 10px; /* Add this line to create the gap */
-    padding: 5px;       /* Make sure you have internal padding too */
+    margin-bottom: 10px;
+    background: #222227;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #2d2d35;
 }
 
-/* Optional: Add space specifically between the title and the list */
-.glossary-card h3 {
-    margin-top: 0;
-    margin-bottom: 5px;
-    border-bottom: 1px solid #444; /* Optional: adds a nice separator line */
+.glossary-header {
+    width: 100%;
+    background: #222227;
+    border: none;
+    color: #f3f4f6;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.2s ease;
+}
+
+.glossary-header:hover {
+    background: #715e12;
+}
+
+.glossary-header .chevron-icon {
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.glossary-header.expanded .chevron-icon {
+    transform: rotate(180deg);
+}
+
+.glossary-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease;
+}
+
+.glossary-content.expanded {
+    grid-template-rows: 1fr;
+}
+
+.glossary-content-inner {
+    overflow: hidden;
+    min-height: 0;
+    padding: 0 20px;
+}
+
+.glossary-content.expanded .glossary-content-inner {
+    padding: 8px 14px 14px 25px;
 }
 
 /* Make bold text slightly brighter white for better contrast */
@@ -629,18 +698,12 @@ select#episodeSelect:hover {
     color: #a1a1aa; /* Slightly muted for italics */
 }
 
-.changelogs-section {
-    background: #111111; /* Matches your other dark containers */
-    padding: 30px;
-    margin-top: 60px;
-    border-radius: 8px;
-    color: #e0e0e0;
+.glossary-list li {
+    margin-bottom: 12px;
 }
 
-.changelogs-section h3 {
-    margin-top: 0px;
-    margin-bottom: 10px;
-    color: #ffffff;
+.glossary-list li:last-child {
+    margin-bottom: 0;
 }
 
 .status-indicator {
@@ -664,8 +727,8 @@ select#episodeSelect:hover {
 }
 
 /* Cleaned Status Classes */
-.character-card.status-missing::before {
-    content: "MISSING";
+.character-card.status-unknown::before {
+    content: "UNKNOWN";
     position: absolute;
     top: 10px;
     right: 10px;
@@ -679,12 +742,37 @@ select#episodeSelect:hover {
     z-index: 10; /* Ensures it stays above the gradient overlays */
 }
 
-.character-card.status-missing {
+.character-card.status-unknown {
     border: 4px solid #4b4b4b;
     position: relative;
 }
 
-.character-card.status-missing .character-portrait {
+.character-card.status-unknown .character-portrait {
+    filter: grayscale(40%) brightness(0.7);
+    transition: filter 0.25s ease;
+}
+
+.character-card.status-sealed::before {
+    content: "SEALED";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 0.65rem;
+    font-weight: bold;
+    color: #d76819;
+    letter-spacing: 0.1em;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2px 6px;
+    border-radius: 3px;
+    z-index: 10; /* Ensures it stays above the gradient overlays */
+}
+
+.character-card.status-sealed {
+    border: 4px solid #642a06;
+    position: relative;
+}
+
+.character-card.status-sealed .character-portrait {
     filter: grayscale(40%) brightness(0.7);
     transition: filter 0.25s ease;
 }

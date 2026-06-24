@@ -1,10 +1,8 @@
 character_id,display_name,reveal_url,affiliation,is_hidden,grade,internal_notes
 yuji_itadori,Yuji Itadori,images/yuji.webp,,TRUE,Unknown,Main character
 satoru_gojo,Satoru Gojo,images/gojo.webp,,TRUE,Unknown,Strongest of all sorcerers
-suguru_geto,Suguru Geto,images/geto.webp,Antagonists,TRUE,Unknown,Secondary antagonist
 megumi_fushiguro,Megumi Fushiguro,images/megumi.webp,,TRUE,Unknown,Part of trio
 nobara_kugisaki,Nobara Kugisaki,images/nobara.webp,,TRUE,Unknown,Part of trio
-ryomen_sukuna,Ryomen Sukuna,images/sukuna.webp,Antagonists,TRUE,Unknown,Main antagonist
 masamichi_yaga,Masamichi Yaga,images/yaga.webp,,TRUE,Unknown,Principal of Tokyo JJ Tech
 shoko_ieiri,Shoko Ieiri,images/shoko.webp,Tokyo,TRUE,Unknown,Doctor
 kiyotaka_ijichi,Kiyotaka Ijichi,images/ijichi.webp,Tokyo,TRUE,Unknown,Gojo assistant
@@ -17,26 +15,21 @@ kinji_hakari,Kinji Hakari,images/hakari.webp,Tokyo,TRUE,Unknown,Gambler
 kento_nanami,Kento Nanami,images/nanami.webp,Tokyo,TRUE,Unknown,Yuji mentor
 yu_haibara,Yu Haibara,images/yu.webp,Tokyo,TRUE,Unknown,
 takuma_ino,Takuma Ino,images/ino.webp,Tokyo,TRUE,Unknown,Shiesty master
-utahime_iori,Utahime Iori,images/utahime.webp,Kyoto,TRUE,Unknown,Priest lady
-kenjaku,Kenjaku,images/kenjaku.webp,Antagonists,TRUE,Unknown,Generational villain
-mahito,Mahito,images/mahito.webp,Antagonists,TRUE,Unknown,Patchwork
-jogo,Jogo,images/jogo.webp,Antagonists,TRUE,Unknown,Mountain man
-hanami,Hanami,images/hanami.webp,Antagonists,TRUE,Unknown,Tree spirit
-dagon,Dagon,images/dagon.webp,Antagonists,TRUE,Unknown,Octopus spirit
-uraume,Uraume,images/uraume.webp,Antagonists,TRUE,Unknown,bob-cut monk
-junpei_yoshino,Junpei Yoshino,images/junpei.webp,Neutral,TRUE,Unknown,Sadge farmer
+mei_mei,Mei Mei,images/meimei.webp,Tokyo,TRUE,Unknown,Weird crow lady
+ui_ui,Ui Ui,images/uiui.webp,Tokyo,TRUE,Unknown,
+tengen,Tengen,images/tengen.webp,Tokyo,TRUE,Unknown,barrier man
+atsuya_kusakabe,Atsuya Kusakabe,images/atsuya.webp,Tokyo,TRUE,Unknown,longcoat guy
+yuki_tsukumo,Yuki Tsukumo,images/yuki_alt.webp,Neutral,TRUE,Unknown,Nice fight
 aoi_todo,Aoi Todo,images/todo.webp,Kyoto,TRUE,Unknown,Mentally ill best friend
 mai_zenin,Mai Zenin,images/mai.webp,"Kyoto, Zenin",TRUE,Unknown,Gun-girl
 kasumi_miwa,Kasumi Miwa,images/miwa.webp,Kyoto,TRUE,Unknown,Katana-girl
 noritoshi_kamo,Noritoshi Kamo,images/noritoshi.webp,Kyoto,TRUE,Unknown,Blood-man
 mechamaru,Ultimate Mechamaru,images/mechamaru.webp,Kyoto,TRUE,Unknown,Robo-man
 momo_nishimiya,Momo Nishimiya,images/momo.webp,Kyoto,TRUE,Unknown,Broom girl
+utahime_iori,Utahime Iori,images/utahime.webp,Kyoto,TRUE,Unknown,Priest lady
 yoshinobu_gakuganji,Yoshinobu Gakuganji,images/yoshinobu.webp,Kyoto,TRUE,Unknown,Principal of Kyoto JJ Tech
-mei_mei,Mei Mei,images/meimei.webp,Tokyo,TRUE,Unknown,Weird crow lady
-tengen,Tengen,images/tengen.webp,Tokyo,TRUE,Unknown,barrier man
-atsuya_kusakabe,Atsuya Kusakabe,images/atsuya.webp,Tokyo,TRUE,Unknown,longcoat guy
 generic_silhouette,Silhouette for unrevealed characters,images/generic.webp,HIDDEN,TRUE,Unknown,Used for unrevealed silhouettes
-major_clans,Major Clans,,SYSTEM,TRUE,Unknown,
+clans,Clans,,SYSTEM,TRUE,Unknown,
 groups,Groups,,SYSTEM,TRUE,Unknown,Different groups relevant to story
 grade_scale,Grade Scale,,SYSTEM,TRUE,Unknown,Ranking system to determine grade
 grade_advancement,Grade Advancement,,SYSTEM,TRUE,Unknown,How to advance grades
@@ -48,10 +41,17 @@ personnel,Personnel,,SYSTEM,TRUE,Unknown,Support like Ijichi
 veil,Veil,,SYSTEM,TRUE,Unknown,A barrier that obstructs visions and also mobility
 domains,Domains,,SYSTEM,TRUE,Unknown,Domains
 binding_vows,Binding Vows,,SYSTEM,TRUE,Unknown,Pacts
-naobito_zenin,Naobito Zenin,images/naobito.webp,Zenin,TRUE,Unknown,Zenin Clan Leader
+naobito_zenin,Naobito Zenin,images/naobito_past.webp,Zenin,TRUE,Unknown,Zenin Clan Leader
+ryomen_sukuna,Ryomen Sukuna,images/sukuna.webp,Antagonists,TRUE,Unknown,Main antagonist
+suguru_geto,Suguru Geto,images/geto.webp,Antagonists,TRUE,Unknown,Secondary antagonist
+kenjaku,Kenjaku,images/kenjaku.webp,Antagonists,TRUE,Unknown,Generational villain
+mahito,Mahito,images/mahito.webp,Antagonists,TRUE,Unknown,Patchwork
+jogo,Jogo,images/jogo.webp,Antagonists,TRUE,Unknown,Mountain man
+hanami,Hanami,images/hanami.webp,Antagonists,TRUE,Unknown,Tree spirit
+dagon,Dagon,images/dagon.webp,Antagonists,TRUE,Unknown,Octopus spirit
+uraume,Uraume,images/uraume.webp,Antagonists,TRUE,Unknown,bob-cut monk
 juzo_kumiya,Juzo Kumiya,images/juzo.webp,Antagonists,TRUE,Unknown,ed gein
 haruta_shigemo,Haruto Shigemo,images/shigemo.webp,Antagonists,TRUE,Unknown,overalls guy
-yuki_tsukumo,Yuki Tsukumo,images/yuki_alt.webp,Neutral,TRUE,Unknown,"Nice fight, boy"
 cursed_womb,Cursed Womb,,SYSTEM,TRUE,Unknown,
 choso,Choso,images/choso.webp,Antagonists,TRUE,Special,Death Painting 1
 eso,Eso,images/eso.webp,Antagonists,TRUE,Special,Death Painting 2
@@ -65,8 +65,12 @@ manami_suda,Manami Suda,images/manami.webp,Antagonists,TRUE,Unknown,Geto's ally
 miguel_oduol,Miguel,images/miguel.webp,Antagonists,TRUE,Unknown,Geto's ally
 larue,Larue,images/larue.webp,Antagonists,TRUE,Unknown,Geto's ally
 toshihisha_negi,Toshihisha Negi,images/toshihisha.webp,Antagonists,TRUE,Unknown,Geto's ally
+toji_fushiguro,Toji Fushiguro,images/toji.webp,Antagonists,TRUE,Unknown,the curseless goat
+ogami,Ogami,images/ogami.webp,Antagonists,TRUE,Unknown,conjurer
+ogami_grandson,Ogami's Grandson,images/ogami_grandson.webp,Antagonists,TRUE,Unknown,conjurer's grandson
+jiro_awasaka,Jiro Awasaka,images/jiro.webp,Antagonists,TRUE,Unknown,upin guy
+shiu_kong,Shiu Kong,images/shiu.webp,Neutral,TRUE,Unknown,
+junpei_yoshino,Junpei Yoshino,images/junpei.webp,Neutral,TRUE,Unknown,Sadge farmer
 riko_amanai,Riko Amanai,images/riko.webp,Neutral,TRUE,Unknown,Star Plasma Vessel
 misato_kuroi,Misato Kuroi,images/kuroi.webp,Neutral,TRUE,Unknown,Riko's maid/surrogate mother
-toji_fushiguro,Toji Fushiguro,images/toji.webp,Antagonists,TRUE,Unknown,the curseless goat
-shiu_kong,Shiu Kong,images/shiu.webp,Neutral,TRUE,Unknown
 episode_status,Episode Status,,SYSTEM,TRUE,Unknown,for WIP recaps

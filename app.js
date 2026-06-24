@@ -6,6 +6,7 @@ let timelineLogs = [];
 let changelogs = [];
 let chronologicalTimeline = [];
 let expandedDrawers = new Set();
+let expandedGlossaryItems = new Set();
 
 // =========================================================================
 // LIVE DATABASE CONNECTION CONFIGURATION
@@ -69,8 +70,7 @@ function parseCSV(text) {
         if (
             firstColumn === "" || 
             firstColumn.startsWith("===") || 
-            firstColumn.startsWith("---") ||
-            firstColumn.toLowerCase().includes("episode")
+            firstColumn.startsWith("---")
         ) {
             continue; 
         }
@@ -138,12 +138,11 @@ async function loadLiveData() {
 // Connect JS to your index.html structural elements.
 const episodeSelect = document.getElementById('episodeSelect');
 const companionNotice = document.getElementById('companionNotice');
-const characterGrid = document.getElementById('characterGrid');
 
 // =========================================================================
 // PORTRAIT CALCULATOR
 // =========================================================================
-function determinePortraitUrl(character, hasAppeared, characterLogs) {
+function determinePortraitUrl(character, characterLogs) {
     const hasAppearanceLog = characterLogs.some(log => log.info_type === 'appearance' || log.info_type === 'appearance_change');
 
     if (!hasAppearanceLog) {
@@ -158,21 +157,17 @@ function determinePortraitUrl(character, hasAppeared, characterLogs) {
     return character.reveal_url;
 }
 
-// Get only the most recent entry for a specific trait up to currentEpisode.
-function getLatestInfo(charId, type, currentEpisode, logs) {
-    const currentIndex = chronologicalTimeline.indexOf(currentEpisode);
-    
-    const history = logs.filter(l => 
-        l.character_id === charId && 
-        l.info_type === type && 
-        chronologicalTimeline.indexOf(l.episode) <= currentIndex
+function getEpisodeRecapStatus(episode) {
+    const statusLogs = timelineLogs.filter(log =>
+        log.character_id === 'episode_status' &&
+        log.info_type === 'recap' &&
+        log.episode === episode
     );
-    
-    if (history.length === 0) return null;
-    
-    // Sort mathematically using timeline index position.
-    history.sort((a, b) => chronologicalTimeline.indexOf(a.episode) - chronologicalTimeline.indexOf(b.episode));
-    return history[history.length - 1]; 
+
+    if (statusLogs.length === 0) return 'DONE'; // No explicit marker = assume fully recapped.
+
+    // Defensive: if duplicate rows exist for the same episode, trust the last one entered.
+    return statusLogs[statusLogs.length - 1].text_content.trim().toUpperCase();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -215,6 +210,14 @@ function renderCompanionWebsite() {
 
     gridContainer.innerHTML = "";
     loreContainer.innerHTML = ""; 
+
+    const appLayoutEl = document.querySelector('.app-layout');
+    const justWatchedEpisode = currentIndex > 0 ? chronologicalTimeline[currentIndex - 1] : null;
+    const isEpisodeWip = justWatchedEpisode ? getEpisodeRecapStatus(justWatchedEpisode) === 'WIP' : false;
+
+    if (appLayoutEl) {
+        appLayoutEl.classList.toggle('is-wip', isEpisodeWip);
+    }
     
     if (currentEpisode === "S1E01") {
         if (companionNotice) {
@@ -237,7 +240,6 @@ function renderCompanionWebsite() {
     }
 
     // Filter using true chronological timeline array indexes.
-    const unlockedLogs = timelineLogs.filter(log => chronologicalTimeline.indexOf(log.episode) < currentIndex);
     const activeLogs = timelineLogs.filter(log => chronologicalTimeline.indexOf(log.episode) < currentIndex);
 
     characterMaster.forEach(character => {
@@ -273,8 +275,9 @@ function renderCompanionWebsite() {
 
         // Build dynamic CSS classes based on states.
         let cardModifierClass = "";
-        if (currentStatus === "MISSING") cardModifierClass = " status-missing";
         if (currentStatus === "DEAD") cardModifierClass = " status-dead";
+        if (currentStatus === "UNKNOWN") cardModifierClass = " status-unknown";
+        if (currentStatus === "SEALED") cardModifierClass = " status-sealed";
 
         const isMystery = character.is_hidden && String(character.is_hidden).toUpperCase() === "TRUE";
         const hasBeenRevealed = characterLogs.some(l => l.info_type === 'reveal_identity');
@@ -290,7 +293,9 @@ function renderCompanionWebsite() {
         const uniqueFacts = resolveLatestState(activeLogs, character.character_id, 'fact', currentEpisode);
         const uniqueBonds = resolveLatestState(activeLogs, character.character_id, 'relation', currentEpisode);
 
-        const portraitUrl = determinePortraitUrl(character, hasAppeared, characterLogs);
+        const portraitUrl = isEpisodeWip
+            ? "images/empty.webp"
+            : determinePortraitUrl(character, characterLogs);
         const uniqueId = character.character_id.replace(/\s+/g, '-');
         
         // Check for dynamic affiliation changes in the timeline
@@ -435,6 +440,32 @@ if (episodeSelect) {
 
 // Launch the live sync engine immediately when the browser window finishes loading.
 window.addEventListener('DOMContentLoaded', loadLiveData);
+
+// Toggle mechanism for Field Guide accordion entries.
+function toggleGlossaryItem(itemId) {
+    const content = document.getElementById(`glossary-${itemId}`);
+    if (!content) return;
+
+    const header = content.previousElementSibling;
+
+    if (content.classList.contains("collapsed")) {
+        content.classList.remove("collapsed");
+        content.classList.add("expanded");
+        if (header) {
+            header.classList.remove("collapsed");
+            header.classList.add("expanded");
+        }
+        expandedGlossaryItems.add(itemId);
+    } else {
+        content.classList.remove("expanded");
+        content.classList.add("collapsed");
+        if (header) {
+            header.classList.remove("expanded");
+            header.classList.add("collapsed");
+        }
+        expandedGlossaryItems.delete(itemId);
+    }
+}
 
 // Toggle drawer mechanism.
 function toggleDrawer(characterId) {
@@ -615,13 +646,25 @@ function updateSidebar(currentEpisode) {
             factsHTML = `<p>Awaiting spoiler-free info curation.</p>`;
         }
 
+        const isItemExpanded = expandedGlossaryItems.has(itemId);
+        const itemStateClass = isItemExpanded ? "expanded" : "collapsed";
+
         const glossaryCard = document.createElement('div');
         glossaryCard.className = 'glossary-card'; 
         glossaryCard.innerHTML = `
-            <h3>${displayName}</h3>
-            ${factsHTML}
+            <button class="glossary-header ${itemStateClass}" onclick="toggleGlossaryItem('${itemId}')">
+                <span>${displayName}</span>
+                <svg class="chevron-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="glossary-content ${itemStateClass}" id="glossary-${itemId}">
+                <div class="glossary-content-inner">
+                    ${factsHTML}
+                </div>
+            </div>
         `;
-        
+
         sidebarContainer.appendChild(glossaryCard);
     });
 }
