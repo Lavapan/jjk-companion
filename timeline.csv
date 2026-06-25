@@ -24,10 +24,10 @@ curses,S1E01,fact,fact_02,Curses can only be exorcised by cursed energy.
 cursed_energy,S1E01,appearance,,
 cursed_energy,S1E01,reveal_identity,,Cursed Energy
 cursed_energy,S1E01,fact,fact_01,Used to exorcise curses.
-cursed_energy,S1E01,fact,fact_02,**Cursed Objects:** Objects that contain cursed energy.
-sukuna_fingers,S1E01,appearance,,
-sukuna_fingers,S1E01,reveal_identity,,Sukuna Fingers
-sukuna_fingers,S1E01,fact,fact_01,Find out more.
+notable_objects,S1E01,appearance,,
+notable_objects,S1E01,reveal_identity,,Notable Cursed Objects
+notable_objects,S1E01,fact,fact_01,Cursed objects are objects that contain cursed energy.
+notable_objects,S1E01,fact,fact_02,**Sukuna Fingers:** <em>Special grade cursed objects.</em>
 --- Episode 2 ---,,,,
 masamichi_yaga,S1E02,appearance,,
 masamichi_yaga,S1E02,reveal_identity,,
@@ -46,7 +46,7 @@ megumi_fushiguro,S1E02,fact,fact_01,A first-year student at Tokyo Jujutsu Tech.
 megumi_fushiguro,S1E02,affiliation_change,,Tokyo
 ryomen_sukuna,S1E02,fact,fact_01,"Was known as the ""King of Curses"" 1000 years ago, during the golden age of jujutsu."
 ryomen_sukuna,S1E02,fact,fact_11,"Possesses immense destructive power, but lacks complete control over Yuji's body."
-sukuna_fingers,S1E02,fact,fact_01,"There are 20 fingers, on account of Sukuna's 4 arms.<br><em>They are indestructable and grow stronger as time passes.</em>"
+notable_objects,S1E02,fact,fact_02,"**Sukuna Fingers:** There are 20 fingers, on account of Sukuna's 4 arms.<br><em>They are indestructable and grow stronger as time passes.</em>"
 --- Episode 3 ---,,,,
 nobara_kugisaki,S1E03,reveal_identity,,
 nobara_kugisaki,S1E03,fact,fact_01,A first-year student at Tokyo Jujutsu Tech.
@@ -55,6 +55,10 @@ nobara_kugisaki,S1E03,fact,fact_02,Channels her cursed energy through nails and 
 nobara_kugisaki,S1E03,relation,rel_01,Saori *(close friend)*
 nobara_kugisaki,S1E03,fact,fact_10,Wields a hammer and nails as her preferred weapon.
 curses,S1E03,fact,fact_02,"Curses grow in strength and numbers proportionally to the population, due to the density of negative emotions."
+notable_tools,S1E03,appearance,,
+notable_tools,S1E03,reveal_identity,,Notable Cursed Tools
+notable_tools,S1E03,fact,fact_01,Cursed tools are tools that imbued with cursed energy.
+notable_tools,S1E03,fact,fact_02,**Slaughter Demon:** A wide-edged dagger.
 --- Episode 4 ---,,,,
 kiyotaka_ijichi,S1E04,appearance,,
 kiyotaka_ijichi,S1E04,reveal_identity,,
@@ -65,6 +69,7 @@ personnel,S1E04,fact,fact_01,"**Windows:** Jujutsu Tech members who can only see
 grade_scale,S1E04,appearance,,
 grade_scale,S1E04,reveal_identity,,Grades
 grade_scale,S1E04,fact,fact_01,"Classification based on the strength of the sorcerer, cursed spirit, cursed object or cursed tool.<br><em>(Grade 4 → Grade 3 → Semi-Grade 2 → Grade 2 → Semi-Grade 1 → Grade 1 → Special Grade)</em>"
+grade_scale,S1E04,fact,fact_02,"Special grade is unique; it has a minimum limit, but does not have an upper limit.<br><em>While special grades are always stronger than Grade 1's, the gap between special grades can be miniscule or significantly wide.</em>"
 domains,S1E04,appearance,,
 domains,S1E04,reveal_identity,,Domains
 domains,S1E04,fact,fact_01,**Innate Domain:** A barrier that distorts the affected area.
@@ -74,6 +79,10 @@ ryomen_sukuna,S1E04,grade,,Special Grade
 veil,S1E04,appearance,,
 veil,S1E04,reveal_identity,,Veils
 veil,S1E04,fact,fact_01,A barrier that conceals the affected area from the outside world.
+curses,S1E04,fact,fact_01,"Cursed spirits, also referred to as ""curses"", are the physical manifestation of negative energy. Average humans are not able to perceive them, outside of certain conditions."
+notable_curses,S1E04,appearance,,
+notable_curses,S1E04,reveal_identity,,Notable Curses
+notable_curses,S1E04,fact,fact_01,**unnamed curse:** A special grade curse in the juvenille detention center.
 --- Episode 5 ---,,,,
 yuji_itadori,S1E05,fact,fact_04,Has absorbed 3 Sukuna fingers.
 cursed_technique,S1E05,appearance,,
@@ -121,13 +130,12 @@ satoru_gojo,S1E06,fact,fact_11,"Seeks to foster a new, strong generation of juju
 kinji_hakari,S1E06,mention,,
 kinji_hakari,S1E06,reveal_identity,,
 kinji_hakari,S1E06,fact,fact_01,A third-year student at Tokyo Jujutsu Tech.
+kinji_hakari,S1E06,fact,fact_10,Currently suspended from Tokyo Jujutsu Tech.
 yuta_okkotsu,S1E06,appearance,,
 jogo,S1E06,reveal_identity,,
 jogo,S1E06,fact,fact_02,**Cursed Technique:** fire manipulation<br><em>Able to perform techniques that are based around fire.</em>
 jogo,S1E06,fact,fact_09,Rough estimated strength to be the equivalent of 8 - 9 Sukuna fingers.
-prison_realm,S1E06,appearance,,
-prison_realm,S1E06,reveal_identity,,Prison Realm
-prison_realm,S1E06,fact,fact_01,A special grade cursed object that can be used to seal a person.
+notable_objects,S1E06,fact,fact_03,**Prison Realm:** A special grade cursed object that can be used to seal a person.
 kenjaku,S1E06,name_override,,Suguru Geto
 jogo,S1E06,fact,fact_01,A cursed spirit working with Geto.
 jogo,S1E06,fact,fact_12,Intending to bring about the 'age of curses' by exterminating humans and jujutsu society.
@@ -208,7 +216,7 @@ personnel,S1E09,fact,fact_02,**Assistants:** Jujutsu Tech members who can see cu
 --- Episode 10 ---,,,,
 junpei_yoshino,S1E10,fact,fact_10,Dislikes and distrusts other humans due to his bad experiences in the past.
 mahito,S1E10,fact,fact_10,"Believes that lives have no value, thus everyone is free to do however they please."
-grade_scale,S1E10,fact,fact_02,"Sorcerer and Curse grades do not share equal power. A sorcerer is always stronger than a curse of equal grade, as they are expected to consistently defeat equal-grade curses alone.<br><em>A Grade 2 Sorcerer is stronger than a Grade 2 Curse, roughly equalling a Grade 1 Curse in combat capability.</em>"
+grade_scale,S1E10,fact,fact_03,"Sorcerer and Curse grades do not share equal power. A sorcerer is always stronger than a curse of equal grade, as they are expected to consistently defeat equal-grade curses alone.<br><em>A Grade 2 Sorcerer is stronger than a Grade 2 Curse, roughly equalling a Grade 1 Curse in combat capability.</em>"
 hanami,S1E10,grade,,Special Grade
 dagon,S1E10,grade,,Special Grade
 mahito,S1E10,grade,,Special Grade
@@ -261,13 +269,13 @@ toge_inumaki,S1E14,fact,fact_02,"**Cursed Technique:** Cursed Speech<br><em>Ampl
 toge_inumaki,S1E14,fact,fact_09,Limits his vocabulary to rice ball ingredients to keep others and himself safe.
 curses,S1E14,fact,fact_03,"Sorcerers, if not killed with cursed energy, could potentially come back as curses."
 --- Episode 15 ---,,,,
-grade_scale,S1E15,fact,fact_02,Sorcerers advance in rank through recommendations from other sorcerers.<br><em>Teachers cannot recommend students who are under their tutelage.</em>
+grade_scale,S1E15,fact,fact_04,Sorcerers advance in rank through recommendations from other sorcerers.<br><em>Teachers cannot recommend students who are under their tutelage.</em>
 aoi_todo,S1E15,fact,fact_09,"Found a kindred spirit in Yuji and imagines memories of them being best friends, like brothers."
 kasumi_miwa,S1E15,fact,fact_10,Wields a katana as her preferred weapon.
 momo_nishimiya,S1E15,fact,fact_10,Rides a broom to fly.
 --- Episode 16 ---,,,,
 panda,S1E16,fact,fact_10,"He's a unique cursed corpse with emotions, considered a mutation, who was created by Yaga."
-panda,S1E16,fact,fact_09,"He has 3 cores that can be swapped as the main core;<br><em>Panda Core:** balanced form</em><br><em>**Gorilla Core:** power form</em><br><em>**""Bashful"" Core:** unknown form</em>"
+panda,S1E16,fact,fact_09,"He has 3 cores that can be swapped as the main core;<br><ul><li>**Panda Core:** <em>balanced form</em></li><li>**Gorilla Core:** <em>power form</em></li><li>**""Bashful"" Core:** <em>unknown form</em></li></ul>"
 panda,S1E16,relation,rel_01,Masamichi Yaga *(creator/father)*
 panda,S1E16,relation,rel_02,Gorilla Core *(older brother)*
 panda,S1E16,relation,rel_03,"""Bashful"" Core *(older sister)*"
@@ -331,6 +339,7 @@ black_flash,S1E19,appearance,,
 black_flash,S1E19,reveal_identity,,Black Flash
 black_flash,S1E19,fact,fact_01,"When cursed energy is applied within a trillionth of a second of a strike, it causes a phenomenon that amplifies the force of the strike by 2.5 times.<br><em>There are no sorcerers who can consistently use Black Flash.</em>"
 hanami,S1E19,fact,fact_10,Has a flower bulb on their left shoulder.
+notable_tools,S1E19,fact,fact_03,**Playful Cloud:** A special grade three-section staff.
 --- Episode 20 ---,,,,
 yuki_tsukumo,S1E20,appearance,,
 yuki_tsukumo,S1E20,fact,fact_01,A jujutsu sorcerer Todo met when he was younger.
@@ -382,6 +391,7 @@ eso,S1E23,fact,fact_02,**Cursed Technique:** Rot Technique<br><em>Has a face on 
 eso,S1E23,grade,,Special Grade
 eso,S1E23,relation,rel_01,Kechizu *(younger brother)*
 kechizu,S1E23,relation,rel_01,Eso *(older brother)*
+notable_curses,S1E23,fact,fact_01,**unnamed curse:** Special grade cursed spirits that appear at the juvenille detention center and the Yasohachi Bridge. They've each consumed a Sukuna finger.
 --- Episode 24 ---,,,,
 kechizu,S1E24,fact,fact_01,The incarnated Death Painting Three.
 kechizu,S1E24,fact,fact_02,**Cursed Technique:** Rot Technique<br><em>Spits out blood with decomposing properties. All Death Paintings share the same decomposition blood properties.</em>
@@ -405,13 +415,14 @@ choso,S1E24,relation,rel_02,Eso *(younger brother)* **†**
 yuji_itadori,S1E24,fact,fact_04,Has absorbed 4 Sukuna fingers.
 yuji_itadori,S1E24,fact,fact_13,Recommended for advancement to Grade 1 by Todo and Mei Mei.
 megumi_fushiguro,S1E24,fact,fact_13,Recommended for advancement to Grade 1 by Todo and Mei Mei.
+nobara_kugisaki,S1E24,fact,fact_02,"**Cursed Technique:** Straw Doll Technique<br><em>Imbeds and channels cursed energy through nails and straw dolls. Through channeling cursed energy, she can pierce and detonate her cursed energy imbued within her tools.</em>"
 nobara_kugisaki,S1E24,fact,fact_13,Recommended for advancement to Grade 1 by Todo and Mei Mei.
 panda,S1E24,fact,fact_13,Recommended for advancement to Grade 1 by Todo and Mei Mei.
 maki_zenin,S1E24,fact,fact_13,Recommended for advancement to Grade 1 by Todo and Mei Mei.
 --- Movie 1 ---,,,,
 yuta_okkotsu,M1,fact,fact_10,"Rika, coined ""Queen of Curses"" by Geto, was a special grade cursed spirit, manifested by Yuta when he rejected her death, accidentally cursing her into a cursed spirit. She has since been freed."
 yuta_okkotsu,M1,grade,,Special Grade
-yuta_okkotsu,M1,relation,rel_01,Rika Orimoto *(childhood sweetheart)*: Turned into a cursed spirit by Yuta unintentionally but has been freed.
+yuta_okkotsu,M1,relation,rel_01,Rika Orimoto *(childhood sweetheart)* **†**: Turned into a cursed spirit by Yuta unintentionally but has been freed.
 yuta_okkotsu,M1,fact,fact_02,**Cursed Technique:** cursed energy manipulation<br><em>Able to use Rika and the techniques of others through imbued objects.</em>
 veil,M1,fact,fact_01,"A barrier that conceals the affected area from the outside world. It also provokes curses within to reveal themselves.<br><em>Additional effects can be added to it, such as denying entry or exit to certain groups of people or individuals.</em>"
 veil,M1,fact,fact_02,"Veils obstruct the usage of electronic devices, such as cell service."
@@ -436,9 +447,13 @@ kento_nanami,M1,fact,fact_01,A jujutsu sorcerer alumni from Tokyo Jujutsu Tech.
 nanako_hasaba,M1,appearance,,
 nanako_hasaba,M1,reveal_identity,,
 nanako_hasaba,M1,fact,fact_01,An imprisoned child that was saved by Geto.
+nanako_hasaba,M1,relation,rel_01,Mimiko Hasaba *(sister)*
+nanako_hasaba,M1,relation,rel_02,Suguru Geto *(guardian)*
 mimiko_hasaba,M1,appearance,,
 mimiko_hasaba,M1,reveal_identity,,
 mimiko_hasaba,M1,fact,fact_01,An imprisoned child that was saved by Geto.
+mimiko_hasaba,M1,relation,rel_01,Nanako Hasaba *(sister)*
+mimiko_hasaba,M1,relation,rel_02,Suguru Geto *(guardian)*
 miguel_oduol,M1,appearance,,
 miguel_oduol,M1,reveal_identity,,
 miguel_oduol,M1,fact,fact_01,An ally of Geto during the Night Parade of a Hundred Demons.
@@ -452,6 +467,8 @@ toshihisha_negi,M1,fact,fact_01,An ally of Geto during the Night Parade of a Hun
 satoru_gojo,M1,fact,fact_02,**Cursed Technique:** Limitless<br><em>Manipulates the space around himself and his techniques on an atomic level.</em>
 satoru_gojo,M1,fact,fact_04,His eyes are said to be the source of his power.
 kenjaku,M1,fact,fact_13,Attended Tokyo Jujutsu Tech with Gojo.
+kenjaku,M1,relation,rel_02,Nanako Hasaba *(adoptive daughter?)*
+kenjaku,M1,relation,rel_03,Mimiko Hasaba *(adoptive daughter?)*
 satoru_gojo,M1,fact,fact_13,Attended Tokyo Jujutsu Tech with Geto.
 satoru_gojo,M1,relation,rel_01,Yuta Okkotsu *(distant relative)*
 yuta_okkotsu,M1,relation,rel_02,Satoru Gojo *(distant relative)*
@@ -464,6 +481,7 @@ nanako_hasaba,M1,archived,,UNKNOWN
 mimiko_hasaba,M1,archived,,UNKNOWN
 manami_suda,M1,archived,,UNKNOWN
 juzo_kumiya,M1,archived,,UNKNOWN
+notable_curses,M1,fact,fact_02,**Tamamo-no-Mae Incarnate:** A special grade cursed spirit controlled by Geto.
 --- Season 2 ---,,,,
 --- Episode 1 ---,,,,
 mei_mei,S2E01,appearance_change,,images/meimei_teen.webp
@@ -493,15 +511,17 @@ shiu_kong,S2E01,fact,fact_01,"A man assisting Toji, managing his bounties."
 riko_amanai,S2E01,appearance
 riko_amanai,S2E01,fact,fact_01,"The Star Plasma Vessel, to be assimilated with Tengen for his body renewal."
 --- Episode 2 ---,
-toji_fushiguro,S2E02,fact,fact_04,Known as the 'Sorcerer Killer'.
+toji_fushiguro,S2E02,fact,fact_01,"A man interested in the assassination of the Star Plasma Vessel, known as the 'Sorcerer Killer'."
 toji_fushiguro,S2E02,fact,fact_08,Has some sort of relation to Megumi.
 toji_fushiguro,S2E02,fact,fact_11,Was paid a 30-million deposit yen for the assassination of the Star Plasma Vessel.
 shoko_ieiri,S2E02,fact,fact_02,**Cursed Technique:** healing<br><em>Can use reverse cursed technique to heal others.</em>
 riko_amanai,S2E02,reveal_identity
 riko_amanai,S2E02,fact,fact_10,"Her parents died when she was young, leaving her an orphan cared by Kuroi."
+riko_amanai,S2E02,relation,rel_01,Misato Kuroi *(adoptive mother)*
 misato_kuroi,S2E02,appearance,,
 misato_kuroi,S2E02,reveal_identity
 misato_kuroi,S2E02,fact,fact_01,The caretaker of Riko.
+misato_kuroi,S2E02,relation,rel_01,Riko Amanai *(adoptive daughter)*
 kenjaku,S2E02,fact,fact_02,"**Cursed Technique:** Curse Manipulation<br><em>Able to manipulate unbound curses. He can absorb them as orbs, summon, combine and command them.</em>"
 tengen,S2E02,fact,fact_12,Sits at the deepest floor of Tokyo Jujutsu High.
 tengen,S2E02,fact,fact_09,Serves as the foundation of all barriers at Jujutsu Tech. He maintains his own barriers and strengthens the barriers of others.
@@ -519,23 +539,30 @@ toji_fushiguro,S2E03,fact,fact_02,**Cursed Technique:** none<br><em>He possesses
 toji_fushiguro,S2E03,fact,fact_03,"Born with a Heavenly Pact, much like Mechamaru and Maki. He has no cursed energy but in exchange, he possesses superhuman physical prowess."
 riko_amanai,S2E03,fact,fact_09,"Initially wanting to assimilate with Tengen, she yearned to continue living on as herself after the journey with Geto and Gojo."
 riko_amanai,S2E03,archived,,DEAD
+misato_kuroi,S2E03,relation,rel_01,Riko Amanai *(adoptive daughter)* **†**
 satoru_gojo,S2E03,fact,fact_05,Was seemingly killed by Toji.
 satoru_gojo,S2E03,archived,,UNKNOWN
+notable_tools,S2E03,fact,fact_04,"**Inverted Spear of Heaven:** A special grade dagger, capable of forcibly releasing any active technique."
 --- Episode 4 ---
 toji_fushiguro,S2E04,fact,fact_04,"Due to having no innate cursed energy, his presence is invisible to sorcerers, who rely on sensing cursed energy to detect the presence of others."
 toji_fushiguro,S2E04,fact,fact_05,"Has a cursed spirit, which he uses to store cursed tools, spirits and more inside. By shrinking and storing it inside his stomach, he's able to prevent its cursed energy from being sensed by others."
 toji_fushiguro,S2E04,fact,fact_03,"Born with a Heavenly Pact, much like Mechamaru and Maki. He has no cursed energy but in exchange, he possesses superhuman physical prowess and his 5 senses enhanced."
 misato_kuroi,S2E04,archived,,DEAD
+riko_amanai,S2E04,relation,rel_01,Misato Kuroi *(adoptive mother)* **†**
 kenjaku,S2E04,fact,fact_02,"**Cursed Technique:** Curse Manipulation<br><em>Able to manipulate unbound curses. He can absorb them as orbs, summon, combine and command them. If he is roughly stronger by 2 grades-worth, he is able to absorb them without needing to force their submission.</em>"
 toji_fushiguro,S2E04,fact,fact_08,
 toji_fushiguro,S2E04,relation,rel_01,Megumi Fushiguro *(son)*
 toji_fushiguro,S2E04,archived,,DEAD
-megumi_fushiguro,S2E04,relation,rel_02,Toji Fushiguro *(father)*
+toji_fushiguro,S2E04,fact,fact_01,"A jujutsu sorcerer with no cursed energy, known as the ""Sorcerer Killer"","
+megumi_fushiguro,S2E04,relation,rel_02,Toji Fushiguro *(father)* **†**
 shiu_kong,S2E04,fact,fact_01,A mediator who works with Toji.
 satoru_gojo,S2E04,archived,,ACTIVE
 satoru_gojo,S2E04,fact,fact_09,Regarded as the strongest jujutsu sorcerer of the modern age.
 satoru_gojo,S2E04,fact,fact_05
---- Episode 5 ---,
+notable_curses,S2E04,fact,fact_03,"**unnamed curse:** A cursed spirit capable of storing cursed tools, spirits and more inside itself. Originally used by Toji but now in the possession of Geto."
+notable_curses,S2E04,fact,fact_04,"**Rainbow Dragon:** A dragon cursed spirit with the toughest hide, controlled by Geto."
+notable_curses,S2E04,fact,fact_05,"**unnamed curse:** A humanoid cursed spirit, capable of employing a non-violence simple domain, controlled by Geto."
+--- Episode 5 ---,,,,
 satoru_gojo,S2E05,fact,fact_14,"After his battle with Toji, he had awakened to a new, profound understanding of cursed energy, skyrocketing his grasp on cursed techniques and his power."
 satoru_gojo,S2E05,fact,fact_10,"Initially did not subscribe to the belief that sorcerers are obligated to protect the weak, but has since changed his worldview."
 kenjaku,S2E05,fact,fact_08,"Is to be executed under jujutsu law after cursing 112 people to death, as well as his parents."
@@ -547,6 +574,7 @@ yuki_tsukumo,S2E05,grade,,Special Grade
 yuki_tsukumo,S2E05,affiliation_change,,Tokyo
 yuki_tsukumo,S2E05,fact,fact_10,"Is not looked upon fondly by Jujutsu High, as she rarely accepts missions and is often travelling."
 yuki_tsukumo,S2E05,fact,fact_11,"Hopes to create a world where curses aren't born, as opposed to jujutsu society's view of exorcising curses."
+cursed_energy,S2E05,fact,fact_02,"Most beings leak cursed energy, however jujutsu sorcerers naturally leak less energy than average humans."
 yu_haibara,S2E05,fact,fact_10,Died during a joint mission with Nanami.
 yu_haibara,S2E05,archived,,DEAD
 satoru_gojo,S2E05,appearance_change,,images/gojo.webp
@@ -609,18 +637,21 @@ mei_mei,S2E08,grade,,Grade 1
 yuji_itadori,S2E08,fact,fact_13,Promotion Evaluation postponed.
 atsuya_kusakabe,S2E08,fact,fact_02,**Cursed Technique:** none<br><em>Find out more.</em>
 choso,S2E08,fact,fact_02,**Cursed Technique:** Blood Manipulation<br><em>Able to expel blood out of his body and manipulate it.</em>
+notable_curses,S2E08,fact,fact_06,"**Ko-guy:** A grasshopper cursed spirit, working with Mahito."
 --- Episode 9 ---,,,,
 domains,S2E09,fact,fact_05,"<em>While both are similar, Simple Domain restricts your movements while Domain Amplification allows you to move freely but restricts your ability to use cursed techniques.</em>"
 hanami,S2E09,archived,,DEAD
-prison_realm,S2E09,fact,fact_01,"A special grade cursed object that can seal anything inside it. For it to seal something, the target must be within its 4-meter range for one full minute."
+notable_objects,S2E09,fact,fact_03,"**Prison Realm:** A special grade cursed object that can seal anything inside it.<br><em>For it to seal something, the target must be within its 4-meter range for one full minute.</em>"
 satoru_gojo,S2E09,fact,fact_15,"He activated his Domain Expansion for 0.2 second to temporarily paralyze everyone within its range due to the limitless information surging into their minds. Following this, he slaughtered all 1,000 transfigured humans within 299 seconds."
-kenjaku,S2E09,name_override,,???
+kenjaku,S2E09,name_override,,Pseudo-Geto
 kenjaku,S2E09,fact,fact_02,"**Curse Technique:** body swap<br><em>By replacing the brain of a body with itself, it is able to inhabit and control said body as if it was its own, even said body's techniques.</em>"
 kenjaku,S2E09,fact,fact_08,"He had been posing as Suguru Geto, undetermined for how long, after his death."
 kenjaku,S2E09,fact,fact_10,"Has a stitching on his forehead, where he removed the brain from Geto's body and replaced it with himself."
 kenjaku,S2E09,fact,fact_12,
 kenjaku,S2E09,fact,fact_13,
 kenjaku,S2E09,relation,rel_01,
+kenjaku,S2E09,relation,rel_02,
+kenjaku,S2E09,relation,rel_03,
 suguru_geto,S2E09,appearance,,
 suguru_geto,S2E09,reveal_identity,,
 suguru_geto,S2E09,fact,fact_01,"A former jujutsu sorcerer who once attended Tokyo Jujutsu High, but eventually became a curse user."
@@ -632,8 +663,13 @@ suguru_geto,S2E09,fact,fact_10,"Organized a jujutsu terror attack known as ""the
 suguru_geto,S2E09,fact,fact_12,He was the leader of a religious group using his position to collect curses from its followers.
 suguru_geto,S2E09,fact,fact_13,Attended Tokyo Jujutsu Tech with Gojo and Shoko.
 suguru_geto,S2E09,relation,rel_01,Satoru Gojo *(former best friend)*
+suguru_geto,S2E09,relation,rel_02,Nanako Hasaba *(adaoptive daughter?)*
+suguru_geto,S2E09,relation,rel_03,Mimiko Hasaba *(adaoptive daughter?)*
 suguru_geto,S2E09,affiliation_change,,"Tokyo, Antagonists"
 suguru_geto,S2E09,archived,,DEAD
+satoru_gojo,S2E09,relation,rel_02,Suguru Geto *(former best friend)* **†**
+nanako_hasaba,S2E09,relation,rel_02,Suguru Geto *(guardian)* **†**
+mimiko_hasaba,S2E09,relation,rel_02,Suguru Geto *(guardian)* **†**
 yuta_okkotsu,S2E09,fact,fact_02,"**Cursed Technique:** cursed energy manipulation<br><em>Possessing a bottomless well of cursed energy, he is able to use Rika and copy the techniques of others.</em>"
 --- Episode 10 ---,,,,
 satoru_gojo,S2E10,archived,,SEALED
@@ -642,11 +678,21 @@ kenjaku,S2E10,fact,fact_09,"Doesn't have full control over Geto's body, as seen 
 mechamaru,S2E10,fact,fact_06,"Prior to his death, he had prepared 3 mini-Mechamarus that would activate upon the sealing of Gojo. They are connected and share audio and visual data between each other. They appear to carry some level of his consciousness."
 haruta_shigemo,S2E10,fact,fact_10,"Uses a sword, made by Juzo, as his preferred weapon."
 nanako_hasaba,S2E10,archived,,ACTIVE
+nanako_hasaba,S2E10,appearance_change,,images/nanako_shibuya.webp
 nanako_hasaba,S2E10,fact,fact_10,"Worked with the Geto imposter, in hopes of getting Geto's body back but ultimately was denied the request."
 mimiko_hasaba,S2E10,archived,,ACTIVE
+mimiko_hasaba,S2E10,appearance_change,,images/mimiko_shibuya.webp
 mimiko_hasaba,S2E10,fact,fact_10,"Worked with the Geto imposter, in hopes of getting Geto's body back but ultimately was denied the request."
 takuma_ino,S2E10,fact,fact_10,"Looks up to Nanami, always hoping to make him proud."
 clans,S2E10,fact,fact_02,**Other clans:**<br><ul><li>Inumaki Clan</li><li>Gojo Clan: <em>Satoru Gojo is its sole member currently.</li></em></ul>
+jogo,S2E10,fact,fact_01,A cursed spirit working with Pseudo-Geto.
+mahito,S2E10,fact,fact_01,A cursed spirit working with Pseudo-Geto.
+dagon,S2E10,fact,fact_01,A cursed spirit working with Pseudo-Geto.
+hanami,S2E10,fact,fact_01,A cursed spirit working with Pseudo-Geto.
+choso,S2E10,fact,fact_01,A cursed spirit working with Pseudo-Geto and his group.
+juzo_kumiya,S2E10,fact,fact_01,A curse user working with Pseudo-Geto and his group.
+haruta_shigemo,S2E10,fact,fact_01,A curse user working with Pseudo-Geto and his group.
+uraume,S2E10,fact,fact_01,A curse user working with Pseudo-Geto and his group.
 ogami,S2E10,appearance,,
 ogami,S2E10,reveal_identity,,
 ogami_grandson,S2E10,appearance,,
@@ -654,44 +700,133 @@ jiro_awasaka,S2E10,appearance,,
 jiro_awasaka,S2E10,reveal_identity,,
 --- Episode 11 ---,,,,
 veil,S2E11,fact,fact_03,"A veil's strength increases with the user's susceptibility to danger. The riskier it is, the stronger the veil."
-ogami,S2E11,fact,fact_01,"A curse user working with Geto's group, tasked with managing veils over Shibuya."
+ogami,S2E11,fact,fact_01,"A curse user working with Pseudo-Geto's group, tasked with managing veils over Shibuya."
 ogami,S2E11,fact,fact_02,**Curse Technique:** summoning<br><em>Able to transform herself and others by summoning the spirits of the deceased.</em>
 ogami,S2E11,relation,rel_01,Mohawk man *(grandson)*
 ogami_grandson,S2E11,name_override,,Mohawk man
-ogami_grandson,S2E11,fact,fact_01,"A man working with Geto's group, tasked with managing veils over Shibuya."
+ogami_grandson,S2E11,fact,fact_01,"A man working with Impostor Geto's group, tasked with managing veils over Shibuya."
 ogami_grandson,S2E11,relation,rel_01,Ogami *(grandmother)*
-jiro_awasaka,S2E11,fact,fact_01,"A curse user working with Geto's group, tasked with managing veils over Shibuya."
+jiro_awasaka,S2E11,fact,fact_01,"A curse user working with Pseudo-Geto's group, tasked with managing veils over Shibuya."
 jiro_awasaka,S2E11,fact,fact_02,"**Curse Technique:** Inverse<br><em>Inverts the force of attacks that hit him; strong attacks become weaker, and weak attacks become stronger.<br>His inversion has an upper and lower limit.</em>"
 jiro_awasaka,S2E11,fact,fact_10,"He dismembers and mutilates his victims, some while still alive, citing that, as a killer, he needs to understand how the human body works."
 takuma_ino,S2E11,fact,fact_02,"**Curse Technique:** Auspicious Beast Summon<br><em>By hiding his face, he becomes a spiritual medium and can manifest the powers of the four auspicious beasts.</em>"
 satoru_gojo,S2E11,fact,fact_15,"His birth shifted the power balance of all curse users, sorcerers and curses. From a young age, he had an assassination bounty placed on him."
-toji_fushiguro,S2E11,archived,,ACTIVE
-toji_fushiguro,S2E11,appearance_change,,images/toji_resurrected.webp
-toji_fushiguro,S2E11,fact,fact_15,Was resurrected through Ogami's summoning by using her grandson's body as a vessel.
 --- Episode 12 ---,,,,
-episode_status,S2E12,recap,,WIP
+kiyotaka_ijichi,S2E12,archived,,CRITICAL
+kiyotaka_ijichi,S2E12,fact,fact_10,Critically injured at Shibuya after being attacked by a curse user.
+mei_mei,S2E12,fact,fact_02,"**Cursed Technique:** crow manipulation<br><em>Able to control and share her senses with crows, as well as project their vision so it could be seen by others.</em>"
+toji_fushiguro,S2E12,archived,,ACTIVE
+toji_fushiguro,S2E12,appearance_change,,images/toji_resurrected.webp
+toji_fushiguro,S2E12,fact,fact_05,
+toji_fushiguro,S2E12,fact,fact_07,Was resurrected through Ogami's summoning by using her grandson's body as a vessel.
+ogami_grandson,S2E12,fact,fact_02,"Originally meant to channel Toji's body information, such as his strength into his own. Unfortunately, due to Toji's soul overpowering his own, Togi gained control of his body instead."
+ogami_grandson,S2E12,archived,,UNKNOWN
+ogami,S2E12,fact,fact_02,"**Curse Technique:** summoning<br><em>Able to transform herself and others by summoning the spirits of the deceased. Only summons the body's information, to prevent accidents where the soul of the deceased takes control of the vessel.</em>"
+ogami,S2E12,archived,,DEAD
+haruta_shigemo,S2E12,fact,fact_01,A curse user working with Pseudo-Geto and his group.
+haruta_shigemo,S2E12,fact,fact_02,**Cursed Technique:** unknown<br><em>Allows him to survive damage that would otherwise be fatal to him. He seemingly doesn't understand how his own cursed technique works.</em>
+haruta_shigemo,S2E12,fact,fact_09,"A sadistic individual who enjoys hurting others, simply because it's fun to him."
+haruta_shigemo,S2E12,fact,fact_10,"Uses a cursed tool, made by Juzo, as his preferred weapon."
+notable_curses,S2E12,fact,fact_07,"**Smallpox Deity:** A special grade disease cursed spirit, controlled by Pseudo-Geto. Capable of using Domain Expansion."
+takuma_ino,S2E12,archived,,CRITICAL
 --- Episode 13 ---,,,,
-episode_status,S2E13,recap,,WIP
+yuji_itadori,S2E13,archived,,CRITICAL
 --- Episode 14 ---,,,,
-episode_status,S2E14,recap,,WIP
+ui_ui,S2E14,fact,fact_02,**Cursed Technique:** unknown<br><em>Able to use simple domains.</em>
+mei_mei,S2E14,fact,fact_02,**Cursed Technique:** Black Bird Manipulation<br><em>Able to control and share her senses with crows as well as project their vision so it could be seen by others.</em>
+naobito_zenin,S2E14,fact,fact_02,"**Cursed Technique:** Projection Sorcery<br><em>He maps 1 second into 24 frames, thus 24 actions. He must define 24 actions within said second, or else he freezes for that second. Anyone he is touching must also abide by the same rules. Frozen opponents turn into a physical animation frame.</em>"
+naobito_zenin,S2E14,fact,fact_10,He had lost his right arm during the fight with Dagon.
+dagon,S2E14,reveal_identity,,
+dagon,S2E14,fact,fact_02,**Cursed Technique:** water manipulation<br><em>Able to manifest and manipulate water.</em>
+dagon,S2E14,fact,fact_03,**Domain Expansion:** Horizon of the Captivating Skandha
+dagon,S2E14,appearance_change,,images/dagon_grown.webp
+domains,S2E14,fact,fact_06,"**Falling Blossom Emotion:** An anti-domain technique passed down among the major clans.<br><em>Like Simple Domain, it doesn't employ a domain but the moment a 'sure-hit' attack activates, it counters said attack with cursed energy.</em>"
+domains,S2E14,fact,fact_02,"**Domain Expansion:** Materializing an innate domain using a barrier. Attacks inside are guaranteed to hit.<br>When two domains clash, the stronger domains will dominate the inferior domain. During the clash, the 'sure-hit' effect is temporarily disrupted.<br><em>Expansive within, they appear as a spherical barrier from the outside and can be broken into with enough force. Domains are escapable from within, albeit very difficult.</em>"
 --- Episode 15 ---,,,,
-episode_status,S2E15,recap,,WIP
+ogami,S2E15,fact,fact_02,**Curse Technique:** seance<br><em>Able to transform herself and others by summoning the spirits of the deceased. Only summons the body's information to prevent accidents where the soul of the deceased takes control of the vessel.</em>
+toji_fushiguro,S2E15,fact,fact_07,"Was resurrected through Ogami's seance technique by using her grandson's body as a vessel. It uses the vessel's cursed energy to fuel the resurrection until it runs out, but since Toji was born with no cursed energy, his resurrection uses no cursed energy, allowing him to stay resurrected indefinitely."
+dagon,S2E15,archived,,DEAD
+naobito_zenin,S2E15,archived,,CRITICAL
+kento_nanami,S2E15,archived,,CRITICAL
+maki_zenin,S2E15,archived,,CRITICAL
+yuji_itadori,S2E15,fact,fact_04,Has absorbed at least 15 Sukuna fingers.
+yuji_itadori,S2E15,archived,,ACTIVE
+nanako_hasaba,S2E15,fact,fact_01,A curse user that was saved by Geto as a child.
+nanako_hasaba,S2E15,fact,fact_02,**Cursed Technique:** unknown<br><em>Uses her phone to activate it.</em>
+nanako_hasaba,S2E15,archived,,DEAD
+mimiko_hasaba,S2E15,fact,fact_01,A curse user that was saved by Geto as a child.
+mimiko_hasaba,S2E15,fact,fact_02,**Cursed Technique:** unknown<br><em>Not much is known.</em>
+mimiko_hasaba,S2E15,archived,,DEAD
+suguru_geto,S2E15,relation,rel_02,Nanako Hasaba *(adaoptive daughter?)* **†**
+suguru_geto,S2E15,relation,rel_03,Mimiko Hasaba *(adaoptive daughter?)* **†**
 --- Episode 16 ---,,,,
-episode_status,S2E16,recap,,WIP
+toshihisha_negi,S2E16,archived,,ACTIVE
+toshihisha_negi,S2E16,appearance_change,,images/toshihisha_shibuya.webp
+toshihisha_negi,S2E16,fact,fact_01,A curse user who is working with Pseudo-Geto.
+toshihisha_negi,S2E16,fact,fact_10,He worked with Geto during the Night Parade of a Hundred Demons.
+manami_suda,S2E16,archived,,ACTIVE
+manami_suda,S2E16,appearance_change,,images/manami_shibuya.webp
+manami_suda,S2E16,fact,fact_01,A curse user who is working with Pseudo-Geto.
+manami_suda,S2E16,fact,fact_10,She worked with Geto during the Night Parade of a Hundred Demons.
+takuma_ino,S2E16,archived,,ACTIVE
+kiyotaka_ijichi,S2E16,archived,,ACTIVE
+toji_fushiguro,S2E16,fact,fact_08,"During his resurrection, he encountered Megumi. Upon learning Megumi's last name, he forcibly released his resurrection."
+toji_fushiguro,S2E16,archived,,DEAD
+ogami_grandson,S2E16,archived,,DEAD
+larue,S2E16,archived,,ACTIVE
+larue,S2E16,appearance_change,,images/larue_shibuya.webp
+larue,S2E16,fact,fact_01,A curse user who is working with Pseudo-Geto.
+larue,S2E16,fact,fact_10,He worked with Geto during the Night Parade of a Hundred Demons.
+miguel,S2E16,archived,,UNKNOWN
+jogo,S2E16,archived,,DEAD
+uraume,S2E16,fact,fact_10,"Appears to be someone who Sukuna is familiar with, presumably from 1000 years ago."
+uraume,S2E16,relation,rel_01,Ryomen Sukuna *(lord?)*
+ryomen_sukuna,S2E17,fact,fact_02,**Cursed Technique:** slashing<br><em>Able to cut and slice his opponents. He is also able to use techniques other than slashing.</em>
+ryomen_sukuna,S2E16,relation,rel_01,Uraume *(servant?)*
 --- Episode 17 ---,,,,
-episode_status,S2E17,recap,,WIP
+haruta_shigemo,S2E17,fact,fact_02,"**Cursed Technique:** damage nullification<br><em>Erases tiny miracles and its memories from his life and stores them as patterns around his eyes. Upon taking fatal damage, one of the patterns will be erased, negating said damage. He himself is not aware of how his technique works.</em>"
+haruta_shigemo,S2E17,archived,,DEAD
+ryomen_sukuna,S2E17,fact,fact_02,"**Cursed Technique:** slash attacks<br><em>Uses ""Cleave"" against opponents with cursed energy, and ""Dismantle"" against those without. He is also able to use techniques other than slashing.</em>"
+ryomen_sukuna,S2E17,fact,fact_03,"**Domain Expansion:** Malevolent Shrine<br><em>Unlike other domains, his domain manifests into the physical world without a barrier, making it an open domain. It comes with a binding vow, having it open thus making an escape. In exchange, it increases the range of its 'sure-hit' attacks, adjustable up to 200 meters.</em>"
+megumi_fushiguro,S2E17,fact,fact_06,"**Ten Shadows Technique:** Taming can be attempted infinitely, but the Shikigami can only be used once tamed. While taming a Shikigami can technically be done with multiple people, the inclusion of others invalids the taming.<em>Despite that, the act itself can be used as a strategic move.</em>"
+megumi_fushiguro,S2E17,fact,fact_06,"Mahoraga, the strongest of the ten Shikigami, has never been tamed, even after attempts spanning generations of sorcerers. This is due to its ability to adapt to not only attacks but all phenomena, indicated by the turning of the wheel above it. It can also regenerate and heal itself upon adaptation. <em>The only way to defeat it is by overwhelming it with attacks before it adapts.</em>"
+kento_nanami,S2E17,fact,fact_06,"Half of his upper body was severely burnt due to Jogo's attack. "
 --- Episode 18 ---,,,,
-episode_status,S2E18,recap,,WIP
+kento_nanami,S2E18,archived,,DEAD
+mahito,S2E18,fact,fact_02,"**Cursed Technique:** Idle Transfiguration<br><em>Alters souls transfiguring the body's form and nature whether his own body or others. Requires him to be touching the target with his palm to activate his technique. He is able to split his soul, creating clones.</em>"
 --- Episode 19 ---,,,,
-episode_status,S2E19,recap,,WIP
+mahito,S2E19,fact,fact_02,"**Cursed Technique:** Idle Transfiguration<br><em>Alters souls transfiguring the body's form and nature whether his own body or others. Requires him to be touching the target with his palm to activate his technique. He is able to split his soul, creating clones that can't use techniques.</em>"
+nobara_kugisaki,S2E19,relation,rel_02,Fumi *(chilldhood friend)*
+nobara_kugisaki,S2E19,archived,,DEAD
 --- Episode 20 ---,,,,
-episode_status,S2E20,recap,,WIP
+arata_nitta,S2E20,appearance,,
+arata_nitta,S2E20,reveal_identity,,
+arata_nitta,S2E20,fact,fact_01,A first year student at Kyoto Jujutsu Tech.
+arata_nitta,S2E20,fact,fact_02,"**Cursed Technique:** first aid<br><em>Able to 'pause' existing injuries, stopping them from worsening.</em>"
+arata_nitta,S2E20,relation,rel_01,Akari Nitta *(older sister)*
+akari_nitta,S2E20,relation,rel_01,Arata Nitta *(younger brother)*
 --- Episode 21 ---,,,,
-episode_status,S2E21,recap,,WIP
+aoi_todo,S2E21,fact,fact_06,Lost his left hand during his fight with Mahito in Shibuya.
+aoi_todo,S2E21,fact,fact_02,"**Cursed Technique:** Boogie Woogie<br><em>By clapping his hands, he can swap the position of himself, others and objects, that possesses cursed energy above a certain level, with each other. He can only swap the position of 2 things at once. He can use the hands of others alongside his own to activate the technique.</em>"
 --- Episode 22 ---,,,,
-episode_status,S2E22,recap,,WIP
+mahito,S2E22,fact,fact_06,"Was absorbed by Pseudo-Geto, who then used Uzumaki to extract his Idle Transfiguration technique for his own use."
+suguru_geto,S2E22,fact,fact_04,"Using Uzumaki, an application of his technique, he can combine curses. Using it on a Semi Grade 1 or higher allows him to extract the techniques of said curse."
+kenjaku,S2E22,fact,fact_02,"**Curse Technique:** body swap<br><em>By replacing the brain of a body with itself, it is able to inhabit and control said body as if it was its own, even obtain and use said body's memories and techniques. Using Geto's Uzumaki, he's able to obtain more techniques.</em>"
+yuji_itadori,S2E22,relation,rel_03,Choso *(older brother?):* Somehow related by blood via Kamo (Pseudo-Geto).
+choso,S2E22,relation,rel_03,Yuji Itadori *(younger brother?)* Somehow related by blood via Kamo (Pseudo-Geto).
+choso,S2E22,fact,fact_02,"**Cursed Technique:** Blood Manipulation<br><em>Able to expel blood out of his body and manipulate it. He can sense his siblings' ""anomalies"", no matter the distance.</em>"
+uraume,S2E22,fact,fact_02,**Cursed Technique:** Ice Formation<br><em>Able to manifest advanced ice techniques.</em>
+momo_nishimiya,S2E22,fact,fact_02,"**Cursed Technique:** Tool Manipulation<br><em>Able to control her broom remotely. By swinging her broom, she is able to send out bursts of wind as attacks.</em>"
 --- Episode 23 ---,,,,
-episode_status,S2E23,recap,,WIP
+megumi_fushiguro,S2E23,relation,rel_01,Tsumiki *(step-sister):* Awakened from her coma due to Pseudo-Geto activating his technique.
+kenjaku,S2E23,fact,fact_06,"Had marked many people with latent cursed energy, like Tsumiki, in advance. Upon obtaining Idle Transfiguration, he had transfigured them to awaken to their cursed techniques.<br><em>In order to make them improve their grasp on cursed energy, he plans to have them kill each other.</em>"
+kenjaku,S2E23,fact,fact_07,"He intends to bring about a chaotic new age of jujutsu sorcery, similar to the Heian Era 1000 years ago, that exists entirely beyond his own control."
+toge_inumaki,S2E23,fact,fact_07,"Lost his left arm during the events of Shibuya, seemingly cut by Yuji."
+satoru_gojo,S2E23,fact,fact_05,Listed as a co-conspirator in the events of Shibuya by Jujutsu Headquarters. He is permanently expelled from jujutsu society and any attempt to unseal him is considered a criminal act.
+masamichi_yaga,S2E23,fact,fact_05,Suspected of instigating the events of Shibuya and is sentenced to death.
+yuji_itadori,S2E23,fact,fact_05,"His suspended execution order has been resumed, and execution is to be carried out promptly by Yuta."
+yuji_itadori,S2E23,appearance_change,,images/yuji_culling.webp
+yuta_okkotsu,S2E23,fact,fact_05,He is designated as Yuji's executioner.
 --- Season 3 ---,,,,
 --- Episode 1 ---,,,,
 episode_status,S3E01,recap,,WIP

@@ -28,6 +28,8 @@ mechamaru,Ultimate Mechamaru,images/mechamaru.webp,Kyoto,TRUE,Unknown,Robo-man
 momo_nishimiya,Momo Nishimiya,images/momo.webp,Kyoto,TRUE,Unknown,Broom girl
 utahime_iori,Utahime Iori,images/utahime.webp,Kyoto,TRUE,Unknown,Priest lady
 yoshinobu_gakuganji,Yoshinobu Gakuganji,images/yoshinobu.webp,Kyoto,TRUE,Unknown,Principal of Kyoto JJ Tech
+arata_nitta,Arata Nitta,images/arata.webp,Kyoto,TRUE,Unknown,Akari's lil bro
+naobito_zenin,Naobito Zenin,images/naobito_past.webp,Zenin,TRUE,Unknown,Zenin Clan Leader
 generic_silhouette,Silhouette for unrevealed characters,images/generic.webp,HIDDEN,TRUE,Unknown,Used for unrevealed silhouettes
 clans,Clans,,SYSTEM,TRUE,Unknown,
 groups,Groups,,SYSTEM,TRUE,Unknown,Different groups relevant to story
@@ -41,7 +43,6 @@ personnel,Personnel,,SYSTEM,TRUE,Unknown,Support like Ijichi
 veil,Veil,,SYSTEM,TRUE,Unknown,A barrier that obstructs visions and also mobility
 domains,Domains,,SYSTEM,TRUE,Unknown,Domains
 binding_vows,Binding Vows,,SYSTEM,TRUE,Unknown,Pacts
-naobito_zenin,Naobito Zenin,images/naobito_past.webp,Zenin,TRUE,Unknown,Zenin Clan Leader
 ryomen_sukuna,Ryomen Sukuna,images/sukuna.webp,Antagonists,TRUE,Unknown,Main antagonist
 suguru_geto,Suguru Geto,images/geto.webp,Antagonists,TRUE,Unknown,Secondary antagonist
 kenjaku,Kenjaku,images/kenjaku.webp,Antagonists,TRUE,Unknown,Generational villain
@@ -74,3 +75,6 @@ junpei_yoshino,Junpei Yoshino,images/junpei.webp,Neutral,TRUE,Unknown,Sadge farm
 riko_amanai,Riko Amanai,images/riko.webp,Neutral,TRUE,Unknown,Star Plasma Vessel
 misato_kuroi,Misato Kuroi,images/kuroi.webp,Neutral,TRUE,Unknown,Riko's maid/surrogate mother
 episode_status,Episode Status,,SYSTEM,TRUE,Unknown,for WIP recaps
+notable_curses,Notable Curses,,SYSTEM,TRUE,Unknown
+notable_objects,Notable Cursed Objects,,SYSTEM,TRUE,Unknown
+notable_tools,Notable Cursed Tools,,SYSTEM,TRUE,Unknown

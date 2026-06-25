@@ -9,6 +9,39 @@ let expandedDrawers = new Set();
 let expandedGlossaryItems = new Set();
 
 // =========================================================================
+// UPDATE VERSION NUMBER EACH TIME YOU SHIP AN UPDATE!
+// =========================================================================
+const ONBOARDING_VERSION = "v1";
+const ONBOARDING_STORAGE_KEY = "jjk_onboarding_seen";
+
+const ONBOARDING_TOPICS = [
+    {
+        id: "nav",
+        title: "Navigation Bar",
+        description: "Switch between episodes using the Prev/Next buttons, or jump straight to a specific episode using the dropdown selector. The site always recaps information revealed before your selected episode.",
+        image: "images/onboarding/demo_nav_bar.webp"
+    },
+    {
+        id: "sidebar",
+        title: "Field Guide (Sidebar)",
+        description: "Non-character info that's essential to the story, such as terminology, techniques, clans, etc., are stored here. Click any entry to expand it and see the details.",
+        image: "images/onboarding/demo_sidebar.webp"
+    },
+    {
+        id: "cards",
+        title: "Character Cards",
+        description: "Each card shows a character's affiliation, grade, known facts and bonds as of the episode you've selected. Click \"Character Details\" to expand the full info drawer.",
+        image: "images/onboarding/demo_characters.webp"
+    },
+    {
+        id: "glow",
+        title: "New & Updated Info",
+        description: "A gold glow means brand-new info has been added. A cyan glow means existing info has been updated. Both update and clear automatically once you move to a different episode.",
+        image: "images/onboarding/demo_notifs.webp"
+    }
+];
+
+// =========================================================================
 // LIVE DATABASE CONNECTION CONFIGURATION
 // =========================================================================
 const CHARACTER_MASTER_URL = "./characters.csv";
@@ -170,13 +203,83 @@ function getEpisodeRecapStatus(episode) {
     return statusLogs[statusLogs.length - 1].text_content.trim().toUpperCase();
 }
 
+function renderOnboardingTopics(activeId) {
+    const listEl = document.getElementById("onboardingTopicList");
+    const mediaEl = document.getElementById("onboardingMediaImage");
+    const descEl = document.getElementById("onboardingDescription");
+    const titleEl = document.getElementById("onboardingTopicTitle");
+    if (!listEl || !mediaEl || !descEl || !titleEl) return;
+
+    const activeTopic = ONBOARDING_TOPICS.find(t => t.id === activeId) || ONBOARDING_TOPICS[0];
+
+    listEl.innerHTML = ONBOARDING_TOPICS.map(topic => `
+        <button class="onboarding-topic-btn ${topic.id === activeTopic.id ? 'active' : ''}"
+                onclick="selectOnboardingTopic('${topic.id}')">
+            ${topic.title}
+        </button>
+    `).join('');
+
+    mediaEl.src = activeTopic.image;
+    mediaEl.alt = activeTopic.title;
+    titleEl.textContent = activeTopic.title;
+    descEl.textContent = activeTopic.description;
+}
+
+function selectOnboardingTopic(topicId) {
+    renderOnboardingTopics(topicId);
+}
+
+function showOnboarding() {
+    const overlay = document.getElementById("onboardingOverlay");
+    if (!overlay) return;
+    renderOnboardingTopics(ONBOARDING_TOPICS[0].id);
+    overlay.classList.add("show");
+}
+
+function closeOnboarding() {
+    const overlay = document.getElementById("onboardingOverlay");
+    if (!overlay) return;
+    overlay.classList.remove("show");
+    localStorage.setItem(ONBOARDING_STORAGE_KEY, ONBOARDING_VERSION);
+}
+
+function initOnboarding() {
+    const overlay = document.getElementById("onboardingOverlay");
+    const closeBtn = document.getElementById("onboardingCloseBtn");
+    const reopenBtn = document.getElementById("onboardingReopenBtn");
+    if (!overlay) return;
+
+    const seenVersion = localStorage.getItem(ONBOARDING_STORAGE_KEY);
+    if (seenVersion !== ONBOARDING_VERSION) {
+        showOnboarding();
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener("click", closeOnboarding);
+    }
+
+    overlay.addEventListener("click", (e) => {
+        if (e.target === overlay) closeOnboarding();
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && overlay.classList.contains("show")) {
+            closeOnboarding();
+        }
+    });
+
+    if (reopenBtn) {
+        reopenBtn.addEventListener("click", showOnboarding);
+    }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     const changelogBtn = document.getElementById("changelogBtn");
     const changelogPanel = document.getElementById("changelogPanel");
 
     if (changelogBtn && changelogPanel) {
         changelogBtn.addEventListener("click", (e) => {
-            e.stopPropagation(); // Prevents click events from instantly bubbling up
+            e.stopPropagation();
             changelogPanel.classList.toggle("show");
         });
 
@@ -192,6 +295,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
+
+    initOnboarding();
 });
 
 // =========================================================================
@@ -278,6 +383,7 @@ function renderCompanionWebsite() {
         if (currentStatus === "DEAD") cardModifierClass = " status-dead";
         if (currentStatus === "UNKNOWN") cardModifierClass = " status-unknown";
         if (currentStatus === "SEALED") cardModifierClass = " status-sealed";
+        if (currentStatus === "CRITICAL") cardModifierClass = " status-critical";
 
         const isMystery = character.is_hidden && String(character.is_hidden).toUpperCase() === "TRUE";
         const hasBeenRevealed = characterLogs.some(l => l.info_type === 'reveal_identity');
@@ -342,9 +448,20 @@ function renderCompanionWebsite() {
         const drawerClass = isCurrentlyExpanded ? "expanded" : "collapsed";
         const buttonText = isCurrentlyExpanded ? "Show Less" : "Character Details";
 
+        // Determine glow state from the same NEW/UPDATED statuses already
+        // computed for the inline badges above — no separate tracking needed,
+        // so it clears automatically whenever the badges themselves clear.
+        const allCardItems = [...uniqueFacts, ...uniqueBonds];
+        let glowClass = "";
+        if (allCardItems.some(item => item.status === 'NEW')) {
+            glowClass = " has-new-info";
+        } else if (allCardItems.some(item => item.status === 'UPDATED')) {
+            glowClass = " has-updated-info";
+        }
+
         // BUILD CHARACTER CARD
         const card = document.createElement('div');
-        card.className = `character-card${cardModifierClass}`;
+        card.className = `character-card${cardModifierClass}${glowClass}`;
         card.innerHTML = `
             <div class="portrait-container">
                 <div class="badge-stack-left">
@@ -649,8 +766,17 @@ function updateSidebar(currentEpisode) {
         const isItemExpanded = expandedGlossaryItems.has(itemId);
         const itemStateClass = isItemExpanded ? "expanded" : "collapsed";
 
+        // Same glow logic as character cards — derived from the same NEW/UPDATED
+        // statuses already powering the inline badges, so it clears for free.
+        let glossaryGlowClass = "";
+        if (finalFacts.some(f => f.status === 'NEW')) {
+            glossaryGlowClass = " has-new-info";
+        } else if (finalFacts.some(f => f.status === 'UPDATED')) {
+            glossaryGlowClass = " has-updated-info";
+        }
+
         const glossaryCard = document.createElement('div');
-        glossaryCard.className = 'glossary-card'; 
+        glossaryCard.className = `glossary-card${glossaryGlowClass}`;
         glossaryCard.innerHTML = `
             <button class="glossary-header ${itemStateClass}" onclick="toggleGlossaryItem('${itemId}')">
                 <span>${displayName}</span>

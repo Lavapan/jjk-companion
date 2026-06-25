@@ -18,7 +18,16 @@
          <button id="nextEp" class="nav-btn">Next →</button>
 
              <div class="header-actions">
-                <!-- Button using a document/list icon layout -->
+
+                <button id="onboardingReopenBtn" class="action-btn" title="Site Guide">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M9.09 9a3 3 0 1 1 5.83 1c0 2-3 3-3 3"></path>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="11" y1="18" x2="13" y2="18"></line>
+                    </svg>
+                </button>
+
                 <button id="changelogBtn" class="action-btn" title="View Changelogs">
                     <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
                         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
@@ -56,6 +65,24 @@
             </div>
         </div>
 
+    </div>
+
+    <div id="onboardingOverlay" class="onboarding-overlay">
+        <div class="onboarding-modal">
+            <button id="onboardingCloseBtn" class="onboarding-close" title="Close">×</button>
+
+            <div class="onboarding-panel-left">
+                <h2 class="onboarding-heading">Site Guide</h2>
+                <p class="onboarding-subheading">Click a topic below to see how it works.</p>
+                <div id="onboardingTopicList" class="onboarding-topic-list"></div>
+            </div>
+
+            <div class="onboarding-panel-right">
+                <img id="onboardingMediaImage" class="onboarding-media" src="" alt="">
+                <h3 id="onboardingTopicTitle" class="onboarding-media-title"></h3>
+                <p id="onboardingDescription" class="onboarding-media-description"></p>
+            </div>
+        </div>
     </div>
 
     <script src="app.js"></script>

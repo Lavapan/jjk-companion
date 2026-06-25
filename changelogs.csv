@@ -1,11 +1,12 @@
 date,update_note
-12-06-2026,"Added all relevant characters in Season 1.<br>Added disclaimer for missing info in characters' info boxes."
+12-06-2026,Added all relevant characters in Season 1.<br>Added disclaimer for missing info in characters' info boxes.
 13-06-2026,"Added recaps for Season 1, Episodes 1 and 2.<br>Added indicators when new or updated info is added."
 14-06-2026,"Added recaps for Season 1, Episodes 3 - 7.<br>Added status indicators for missing & deceased characters.<br>Reworked text formatting for better legibility."
-15-06-2026,"Added recaps for the remaining episodes of Season 1 (Episode 8 - 24).<br>Added tags to display grade classification."
-16-06-2026,"Fixed some text formatting bugs.<br>Reworked card layout."
-18-06-2026,"Added recap for Movie 1 (Jujutsu Kaisen 0).<br>Fixed glossary indexing issue.<br>Improved loading speed for images."
+15-06-2026,Added recaps for the remaining episodes of Season 1 (Episode 8 - 24).<br>Added tags to display grade classification.
+16-06-2026,Fixed some text formatting bugs.<br>Reworked card layout.
+18-06-2026,Added recap for Movie 1 (Jujutsu Kaisen 0).<br>Fixed glossary indexing issue.<br>Improved loading speed for images.
 19-06-2026,"Added recaps for Season 2, Episodes 1 - 3.<br>Reworked indexing logic."
 20-06-2026,"Added recap for Season 2, Episode 4.<br>Revised previous revealed info."
 23-06-2026,"Added recaps for Season 2, Episode 5 - 6.<br>Reworked site layout and moved changelogs into its own panel."
 24-06-2026,"Added recaps for Season 2, Episode 7 - 10.<br>Added disclaimer for episodes that have yet to be recapped.<br>Reworked character cards order to streamline grouping.<br>Reworked sidebar to improve readability."
+25-06-2026,"Added recaps for for the rest of Season 2.<br>Added a site guide to teach users site features."

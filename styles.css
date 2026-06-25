@@ -686,6 +686,29 @@ select#episodeSelect:hover {
     padding: 8px 14px 14px 25px;
 }
 
+/* =========================================================================
+   Glow for new/updated info.
+   ========================================================================= */
+@keyframes glow-pulse-new {
+    0%, 100% { box-shadow: 0 0 3px 1px rgba(255, 204, 0, 0.30); }
+    50%      { box-shadow: 0 0 3px 3px rgba(255, 204, 0, 0.549); }
+}
+
+@keyframes glow-pulse-updated {
+    0%, 100% { box-shadow: 0 0 3px 1px rgba(0, 229, 255, 0.30); }
+    50%      { box-shadow: 0 0 3px 3px rgba(0, 229, 255, 0.549); }
+}
+
+.character-card.has-new-info,
+.glossary-card.has-new-info {
+    animation: glow-pulse-new 2.6s ease-in-out infinite;
+}
+
+.character-card.has-updated-info,
+.glossary-card.has-updated-info {
+    animation: glow-pulse-updated 2.6s ease-in-out infinite;
+}
+
 /* Make bold text slightly brighter white for better contrast */
 .info-list strong,
 .glossary-list strong {
@@ -752,6 +775,31 @@ select#episodeSelect:hover {
     transition: filter 0.25s ease;
 }
 
+.character-card.status-critical::before {
+    content: "CRITICAL";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 0.65rem;
+    font-weight: bold;
+    color: #c75e5e;
+    letter-spacing: 0.1em;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2px 6px;
+    border-radius: 3px;
+    z-index: 10; /* Ensures it stays above the gradient overlays */
+}
+
+.character-card.status-critical {
+    border: 4px solid #c65e5e;
+    position: relative;
+}
+
+.character-card.status-critical .character-portrait {
+    filter: invert(0%) sepia(30%) saturate(100%) hue-rotate(320deg) brightness(70%) contrast(120%);
+    transition: filter 0.25s ease;
+}
+
 .character-card.status-sealed::before {
     content: "SEALED";
     position: absolute;
@@ -802,4 +850,146 @@ select#episodeSelect:hover {
     filter: grayscale(100%) brightness(0.6);
     transition: filter 0.25s ease;
     
+}
+
+/* =========================================================================
+   ONBOARDING MODAL
+   ========================================================================= */
+.onboarding-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(8, 8, 10, 0.82);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.onboarding-overlay.show {
+    display: flex;
+}
+
+.onboarding-modal {
+    position: relative;
+    background: #18181b;
+    border: 1px solid #2d2d35;
+    border-radius: 14px;
+    width: 100%;
+    max-width: 920px;
+    max-height: 85vh;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.onboarding-close {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    background: none;
+    border: none;
+    color: #f3f4f6;
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.onboarding-close:hover {
+    opacity: 1;
+}
+
+.onboarding-panel-left {
+    flex: 0 0 280px;
+    background: #131316;
+    padding: 28px 20px;
+    overflow-y: auto;
+    border-right: 1px solid #2d2d35;
+}
+
+.onboarding-heading {
+    font-size: 1.15rem;
+    margin: 0 0 8px 0;
+    color: #f3f4f6;
+}
+
+.onboarding-subheading {
+    font-size: 0.85rem;
+    color: #a1a1aa;
+    margin: 0 0 20px 0;
+}
+
+.onboarding-topic-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.onboarding-topic-btn {
+    background: #2d2d35;
+    border: 1px solid transparent;
+    color: #f3f4f6;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 10px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.onboarding-topic-btn:hover {
+    background: #383842;
+}
+
+.onboarding-topic-btn.active {
+    background: #383842;
+    border-color: #ffcc00;
+    color: #ffcc00;
+}
+
+.onboarding-panel-right {
+    flex: 1;
+    padding: 28px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.onboarding-media {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover; /* or 'contain' if you don't want any cropping */
+    border-radius: 8px;
+    border: 1px solid #2d2d35;
+    margin-bottom: 18px;
+    background: #0a0a0c;
+}
+
+.onboarding-media-title {
+    margin: 0 0 8px 0;
+    color: #ffcc00;
+    font-size: 1.05rem;
+}
+
+.onboarding-media-description {
+    margin: 0;
+    color: #d4d4d8;
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 720px) {
+    .onboarding-modal {
+        flex-direction: column;
+        max-height: 90vh;
+    }
+    .onboarding-panel-left {
+        flex: none;
+        border-right: none;
+        border-bottom: 1px solid #2d2d35;
+    }
 }
