@@ -30,6 +30,9 @@ utahime_iori,Utahime Iori,images/utahime.webp,Kyoto,TRUE,Unknown,Priest lady
 yoshinobu_gakuganji,Yoshinobu Gakuganji,images/yoshinobu.webp,Kyoto,TRUE,Unknown,Principal of Kyoto JJ Tech
 arata_nitta,Arata Nitta,images/arata.webp,Kyoto,TRUE,Unknown,Akari's lil bro
 naobito_zenin,Naobito Zenin,images/naobito_past.webp,Zenin,TRUE,Unknown,Zenin Clan Leader
+naoya_zenin,Naoya Zenin,images/naoya.webp,Zenin,TRUE,Unknown,
+ogi_zenin,Ogi Zenin,images/ogi.webp,Zenin,TRUE,Unknown,
+jinichi_zenin,Jinichi Zenin,images/jinichi.webp,Zenin,TRUE,Unknown,
 generic_silhouette,Silhouette for unrevealed characters,images/generic.webp,HIDDEN,TRUE,Unknown,Used for unrevealed silhouettes
 clans,Clans,,SYSTEM,TRUE,Unknown,
 groups,Groups,,SYSTEM,TRUE,Unknown,Different groups relevant to story
@@ -78,3 +81,4 @@ episode_status,Episode Status,,SYSTEM,TRUE,Unknown,for WIP recaps
 notable_curses,Notable Curses,,SYSTEM,TRUE,Unknown
 notable_objects,Notable Cursed Objects,,SYSTEM,TRUE,Unknown
 notable_tools,Notable Cursed Tools,,SYSTEM,TRUE,Unknown
+culling_games,Culling Games,,SYSTEM,TRUE,Unknown,mad rules

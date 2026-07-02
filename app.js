@@ -11,7 +11,7 @@ let expandedGlossaryItems = new Set();
 // =========================================================================
 // UPDATE VERSION NUMBER EACH TIME YOU SHIP AN UPDATE!
 // =========================================================================
-const ONBOARDING_VERSION = "v1";
+const ONBOARDING_VERSION = "v1.4.1";
 const ONBOARDING_STORAGE_KEY = "jjk_onboarding_seen";
 
 const ONBOARDING_TOPICS = [
@@ -61,7 +61,8 @@ function populateEpisodeDropdown() {
     const seasonConfig = [
         { season: 1, episodes: 24 }, // Season 1 has 24 episodes.
         { season: 2, episodes: 23 }, // Season 2 has 23 episodes.
-        { season: 3, episodes: 12 }  // Season 3 has 12 episodes currently.
+        { season: 3, episodes: 12 },  // Season 3 has 12 episodes.
+        { season: 4, episodes: 1 }  // Season 4 has unannounced episodes currently.
     ];
 
     seasonConfig.forEach(config => {
