@@ -853,7 +853,7 @@ jinichi_zenin,S3E01,relation,rel_01,Toji Fushiguro *(brother)*
 toji_fushiguro,S3E01,relation,rel_02,Jinichi Zenin *(brother)*
 megumi_fushiguro,S3E01,fact,fact_01,A first-year student at Tokyo Jujutsu Tech and potentially the next head of the Zenin Clan.
 choso,S3E01,affiliation_change,,Neutral
-cursed_wombs,S3E01,fact,fact_04,"Cursed Wombs are able to convert cursed energy into blood and while they cannot die from blood loss, they can die from running out of cursed energy."
+cursed_womb,S3E01,fact,fact_04,"Cursed Wombs are able to convert cursed energy into blood and while they cannot die from blood loss, they can die from running out of cursed energy."
 yuji_itadori,S3E01,archived,,UNKNOWN
 --- Episode 2 ---,,,,
 naoya_zenin,S3E02,fact,fact_02,"**Cursed Technique:** Projection Sorcery<br><em>He maps 1 second into 24 frames, thus 24 actions. He must define 24 actions within said second, or else he freezes for that second. Anyone he is touching must also abide by the same rules. Frozen opponents turn into a physical animation frame.</em>"

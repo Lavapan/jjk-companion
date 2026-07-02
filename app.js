@@ -11,7 +11,7 @@ let expandedGlossaryItems = new Set();
 // =========================================================================
 // UPDATE VERSION NUMBER EACH TIME YOU SHIP AN UPDATE!
 // =========================================================================
-const ONBOARDING_VERSION = "v1.4.1";
+const ONBOARDING_VERSION = "v0.5.2";
 const ONBOARDING_STORAGE_KEY = "jjk_onboarding_seen";
 
 const ONBOARDING_TOPICS = [
